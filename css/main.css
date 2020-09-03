@@ -1,3 +1,9 @@
+/*
+ * Portfolio CSS
+ * @author: Vo, Dinh Tue Minh
+ * @ver: 1.1
+ */
+
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Emblema+One&display=swap"); /* Logo font */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
@@ -672,7 +678,7 @@ header a {
 
 .person-card {
   height: calc(var(--font-size-p) * 15);
-  width: calc(var(--font-size-p) * 20);
+  width: calc(var(--font-size-p) * 22);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1467,6 +1473,10 @@ footer p {
 
 @media only screen and (min-width: 992px) {
 
+  :root {
+    font-size: 18px;
+  }
+
   .section-container {
     margin: calc(var(--space-large) * 2) 5vw;
   }
@@ -1700,6 +1710,9 @@ footer p {
 /* Wide screen */
 
 @media only screen and (min-width: 1200px) {
+  :root { 
+    font-size: 20px;
+  }
   .section-container {
     margin: calc(var(--space-large) * 2) calc(50vw - 540px);
   }

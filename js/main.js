@@ -1,7 +1,7 @@
 /*!
  * Portfolio script
  * @author: Vo, Dinh Tue Minh
- * @ver: 1.0
+ * @ver: 1.1
  */
 
 // -----------------------------------------------------------------------------------
@@ -302,11 +302,12 @@ document.getElementById(csharpBtnID).addEventListener("click", _ => {
   const data =
     `<pre><span class="code-keyword">class</span> <span class="code-class">Person</span> {</pre>
       <pre>  <span class="code-keyword">public</span> <span class="code-class">Person</span>() {</pre>
-      <pre>     <span class="code-attribute">name</span>     = <span class="code-value">"Minh"</span>;</pre>
-      <pre>     <span class="code-attribute">gender</span>   = <span class="code-value">"&male;"</span>;</pre>
-      <pre>     <span class="code-attribute">location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
-      <pre>     <span class="code-attribute">skills</span>   = </pre>
-      <pre>       <span class="code-keyword">new</span> <span class="code-class">List</span>&lt;<span class="code-class">string</span>&gt; { <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span> };</pre>
+      <pre>    <span class="code-attribute">name</span>     = <span class="code-value">"Minh"</span>;</pre>
+      <pre>    <span class="code-attribute">gender</span>   = <span class="code-value">"&male;"</span>;</pre>
+      <pre>    <span class="code-attribute">location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
+      <pre>    <span class="code-attribute">skills</span>   = <span class="code-keyword">new</span> <span class="code-class">List</span>&lt;<span class="code-class">string</span>&gt; {</pre>
+      <pre>      <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span></pre>
+      <pre>    };</pre>
       <pre>  }</pre>
       <pre>}</pre>`;
   changeLanguage(csharpBtnID, data)
@@ -321,8 +322,8 @@ document.getElementById(javaBtnID).addEventListener("click", _ => {
       <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"&male;"</span>;</pre>
       <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
       <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">skills</span>   = <span class="code-keyword">new</span> <span class="code-class">Vector</span>&lt;&gt;() {{</pre>
-      <pre>                       add(<span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span>);</pre>
-      <pre>                    }};</pre>
+      <pre>      add(<span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span>);</pre>
+      <pre>    }};</pre>
       <pre>  }</pre>
       <pre>}</pre>`;
   changeLanguage(javaBtnID, data)
