@@ -160,6 +160,14 @@ code {
   transform: scaleX(1);
 }
 
+noscript {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  background-color: var(--accent-font-color);
+  color: var(--primary-font-color);
+}
+
 /* -------------------------------------------------------------------------------- */
 /* navigation */
 
@@ -167,6 +175,7 @@ header {
   width: 100%;
   position: fixed;
   z-index: 100;
+  
 }
 
 .nav-container {
