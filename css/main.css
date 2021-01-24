@@ -161,7 +161,8 @@ code {
 }
 
 noscript {
-  position: absolute;
+  position: fixed;
+  width: 100%;
   z-index: 1000;
   top: 0;
   background-color: var(--accent-font-color);
@@ -1174,7 +1175,6 @@ header a {
 }
 
 .skill-icon img {
-  width: 48px;
   height: 48px;
 }
 

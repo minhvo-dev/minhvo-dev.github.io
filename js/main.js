@@ -1,7 +1,7 @@
 /*!
  * Portfolio script
  * @author: Vo, Dinh Tue Minh
- * @ver: 1.1
+ * @ver: 1.2
  */
 
 // -----------------------------------------------------------------------------------
@@ -200,27 +200,34 @@ class TextScramble {
 
 const skills = [
   "C++",
-  "MSSQL",
-  "Java",
-  "GIT",
-  "JavaScript",
-  "OOP",
-  "HTML5",
   "C#",
-  "CSS3",
   "Python",
-  "MySQL"
+  "Java",
+  "JavaScript",
+  "HTML5",
+  "CSS3",
+  "GIT",
+  "OOP",
+  "SQL",
+  "NoSQL",
+  "Node.js",
+  "TypeScript",
+  "React",
+  "React Native",
+  "GraphQL",
+  ".NET"
 ];
 const personCardSkillID = "person-card__skill";
 let textScramble = new TextScramble(document.getElementById(personCardSkillID));
-let nextSkillId = 0;
+let nextSkillIdx = 0;
 let textScrambleTimeoutID;
 function setNewSkillToHTML() {
-  textScramble.setText(skills[nextSkillId]).then(() => {
+  textScramble.setText(skills[nextSkillIdx]).then(() => {
     // wait time is 3000ms
     textScrambleTimeoutID = setTimeout(setNewSkillToHTML, 3000);
   });
-  nextSkillId = (nextSkillId + 1) % skills.length;
+  // random next skill index
+  nextSkillIdx = Math.floor(Math.random() * skills.length);
 }
 
 setNewSkillToHTML();
@@ -302,10 +309,10 @@ document.getElementById(csharpBtnID).addEventListener("click", _ => {
   const data =
     `<pre><span class="code-keyword">class</span> <span class="code-class">Person</span> {</pre>
       <pre>  <span class="code-keyword">public</span> <span class="code-class">Person</span>() {</pre>
-      <pre>    <span class="code-attribute">name</span>     = <span class="code-value">"Minh"</span>;</pre>
-      <pre>    <span class="code-attribute">gender</span>   = <span class="code-value">"&male;"</span>;</pre>
-      <pre>    <span class="code-attribute">location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
-      <pre>    <span class="code-attribute">skills</span>   = <span class="code-keyword">new</span> <span class="code-class">List</span>&lt;<span class="code-class">string</span>&gt; {</pre>
+      <pre>    <span class="code-attribute">Name</span>     = <span class="code-value">"Minh"</span>;</pre>
+      <pre>    <span class="code-attribute">Gender</span>   = <span class="code-value">"&male;"</span>;</pre>
+      <pre>    <span class="code-attribute">Location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
+      <pre>    <span class="code-attribute">Skills</span>   = <span class="code-keyword">new</span> <span class="code-class">List</span>&lt;<span class="code-class">string</span>&gt; {</pre>
       <pre>      <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span></pre>
       <pre>    };</pre>
       <pre>  }</pre>
