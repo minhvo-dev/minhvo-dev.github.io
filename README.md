@@ -13,6 +13,11 @@
 
 ## Changelog
 
+### Version 1.2.1 - 14/02/2021
+- Added Patientor app
+- Fixed typo
+- Removed unnecessary resources
+
 ### Version 1.2 - 23/01/2021   
 - Fixed noscript not full screen size
 - Changed "toys" description
