@@ -13,6 +13,9 @@
 
 ## Changelog
 
+### Version 1.2.2 - 16/02/2021
+- Added Google Search meta tag
+
 ### Version 1.2.1 - 14/02/2021
 - Added Patientor app
 - Fixed typo
