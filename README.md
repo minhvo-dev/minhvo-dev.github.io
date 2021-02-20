@@ -13,6 +13,10 @@
 
 ## Changelog
 
+### Version 1.2.3 - 20/02/2021
+- Added some meta tags
+- Animated texts are no longer in random order
+
 ### Version 1.2.2 - 16/02/2021
 - Added Google Search meta tag
 

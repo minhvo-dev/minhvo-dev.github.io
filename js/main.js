@@ -1,7 +1,6 @@
 /*!
  * Portfolio script
  * @author: Vo, Dinh Tue Minh
- * @ver: 1.2
  */
 
 // -----------------------------------------------------------------------------------
@@ -200,22 +199,22 @@ class TextScramble {
 
 const skills = [
   "C++",
-  "C#",
-  "Python",
   "Java",
+  "Python",
   "JavaScript",
   "HTML5",
   "CSS3",
-  "GIT",
+  "Node.js",
+  "React",
+  "GraphQL",
+  "React Native",
   "OOP",
+  "GIT",
+  "C#",
+  ".NET",
   "SQL",
   "NoSQL",
-  "Node.js",
   "TypeScript",
-  "React",
-  "React Native",
-  "GraphQL",
-  ".NET"
 ];
 const personCardSkillID = "person-card__skill";
 let textScramble = new TextScramble(document.getElementById(personCardSkillID));
@@ -226,8 +225,8 @@ function setNewSkillToHTML() {
     // wait time is 3000ms
     textScrambleTimeoutID = setTimeout(setNewSkillToHTML, 3000);
   });
-  // random next skill index
-  nextSkillIdx = Math.floor(Math.random() * skills.length);
+  
+  nextSkillIdx = (nextSkillIdx + 1) % skills.length;
 }
 
 setNewSkillToHTML();
