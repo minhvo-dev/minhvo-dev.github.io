@@ -4,142 +4,25 @@
  */
 
 // -----------------------------------------------------------------------------------
-// NAVIGATION
+// LOADING SCREEN
 
-function toggleHamburger() {
-  // transform hamburger
-  const hamburger = document.getElementsByClassName("hamburger")[0];
-  hamburger.classList.toggle("action");
+const hideLoadingScreen = () => {
+  document.getElementById("preloader").style.display = "none";
+};
 
-  // toggle nav menu
-  toggleNavigationMenu();
-}
+const showContentPage = () => {
+  document.getElementById("content-page").style.display = "unset";
+};
 
-// Toggle navigation
-function toggleNavigationMenu() {
-  // active nav menu
-  const navMenu = document.getElementsByClassName("nav-menu")[0];
-  navMenu.classList.toggle("active");
-}
-
-
-function toggleIndicator() {
-  const indicator = document.getElementsByClassName("scroll-down-container")[0];
-  indicator.classList.toggle("hidden");
-}
-
-const navToggleLabel = document.getElementsByClassName("nav-toggle-button")[0];
-navToggleLabel.addEventListener("click", toggleHamburger);
-
-const navMenuItems = document.getElementsByClassName("nav-menu-item");
-for (item of navMenuItems) {
-  item.addEventListener("click", toggleHamburger);
-}
-// navMenuItems.forEach(e => e.addEventListener("click", toggleNavigationMenu));
-
-// remove 'active' class from nav-menu-item
-function resetNavMenuItem() {
-  const navItems = document.getElementsByClassName("nav-menu-item");
-  for (let i = 0; i < navItems.length; ++i) {
-    let cl = navItems[i].classList;
-    if (cl.contains("active")) {
-      cl.remove("active");
-    }
-  }
-}
-
-const navMenuItemHome = document.getElementById("nav-menu-item-home");
-const navMenuItemPortfolio = document.getElementById("nav-menu-item-portfolio");
-const navMenuItemAbout = document.getElementById("nav-menu-item-about");
-const navMenuItemFAQs = document.getElementById("nav-menu-item-faqs");
-const navMenuItemContact = document.getElementById("nav-menu-item-contact");
-// add 'active' class to nav-menu-item corresponding which section is visible
-function activeNavMenuItem(section) {
-  let navItem = null;
-  switch (section.id) {
-    case "home":
-      navItem = navMenuItemHome;
-      break;
-    case "portfolio":
-      navItem = navMenuItemPortfolio;
-      break;
-    case "about":
-      navItem = navMenuItemAbout;
-      break;
-    case "faqs":
-      navItem = navMenuItemFAQs;
-      break;
-    case "contact":
-      navItem = navMenuItemContact;
-      break;
-    default:
-      console.log(`activeNavMenuItem(): unhandled section '${section.id}'`);
-      break;
-  }
-  if (navItem !== null) {
-    resetNavMenuItem();
-    navItem.classList.add("active");
-  }
-}
-
-
-const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // if (entry.intersectionRect.height / window.innerHeight > 0.5) {
-        activeNavMenuItem(entry.target);
-      // }
-    }
-  });
-}, {
-  root: null, // use browser viewport as default
-  // rootMargin: "0px",
-  rootMargin: "-40% 0% -40% 0%",
-  // threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9] // just in case some sections grow too large
-  threshold: 0.0
-});
-
-// set up section observer for each section
-const sections = document.getElementsByTagName("section");
-for (let i = 0; i < sections.length; ++i) {
-  sectionObserver.observe(sections[i]);
-}
-
-
-const scrollDownIndicator = document.getElementsByClassName("scroll-down-container")[0];
-// show the indicator in the home page
-function showIndicator() {
-  let classList = scrollDownIndicator.classList;
-  if (classList.contains("hidden")) {
-    classList.remove("hidden");
-  }
-}
-
-// hide the indicator in the home page
-function hideIndicator() {
-  let classList = scrollDownIndicator.classList;
-  if (classList.contains("hidden") === false) {
-    classList.add("hidden");
-  }
-}
-
-// toggle the scrolldown indicator based on scrolling
-window.onscroll = () => this.scrollY === 0 ? showIndicator() : hideIndicator();
-
-// NAVIGATION
+// LOADING SCREEN
 // -----------------------------------------------------------------------------------
 
-
 // -----------------------------------------------------------------------------------
-// PERSON CARD 
-
-
-
+// TEXT SCRAMBLE
 
 // TextScramble
 // Justin Windle @soulwire
 // https://codepen.io/soulwire/pen/mErPAK
-// --------------------------------------------------------
 class TextScramble {
   constructor(el) {
     this.el = el;
@@ -197,57 +80,216 @@ class TextScramble {
   }
 }
 
-const skills = [
-  "C++",
-  "Java",
-  "Python",
-  "JavaScript",
-  "HTML5",
-  "CSS3",
-  "Node.js",
-  "React",
-  "GraphQL",
-  "React Native",
-  "OOP",
-  "GIT",
-  "C#",
-  ".NET",
-  "SQL",
-  "NoSQL",
-  "TypeScript",
-];
 const personCardSkillID = "person-card__skill";
 let textScramble = new TextScramble(document.getElementById(personCardSkillID));
+
 let nextSkillIdx = 0;
 let textScrambleTimeoutID;
+
 function setNewSkillToHTML() {
-  textScramble.setText(skills[nextSkillIdx]).then(() => {
+  textScramble.setText(myInfo.skills[nextSkillIdx]).then(() => {
     // wait time is 3000ms
     textScrambleTimeoutID = setTimeout(setNewSkillToHTML, 3000);
   });
-  
-  nextSkillIdx = (nextSkillIdx + 1) % skills.length;
-}
 
-setNewSkillToHTML();
+  nextSkillIdx = (nextSkillIdx + 1) % myInfo.skills.length;
+};
+
+// TEXT SCRAMBLE
+// -----------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------
+// FETCHING DATA
+const myInfo = {
+  name: "Minh",
+  gender: "♂",
+  location: "🇨🇦🍁",
+  skills: []
+};
+const fetchData = fetch("https://aqueous-scrubland-74133.herokuapp.com/", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    query: `
+      query {
+        getMyInfo {
+        name
+        gender
+        location
+        skills
+        availability
+      } 
+    }`
+  }),
+  variables: {}
+});
+// let's wait at least 2 sec
+Promise.all([fetchData, new Promise((resolve) => setTimeout(resolve, 2000))])
+  .then(values => values[0].json())
+  .then(res => {
+    const { name, gender, location, skills, availability } = res.data.getMyInfo;
+    myInfo.name = name;
+    myInfo.gender = gender;
+    myInfo.location = location;
+    myInfo.skills = skills;
+    setAvailabilityLink(availability);
+    setNewSkillToHTML();
+    hideLoadingScreen();
+    showContentPage();
+  })
+  .catch(err => console.log(err));
+
+  // FETCHING DATA
+// -----------------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------------
+// NAVIGATION
+
+function toggleHamburger() {
+  // transform hamburger
+  const hamburger = document.getElementsByClassName("hamburger")[0];
+  hamburger.classList.toggle("action");
+
+  // toggle nav menu
+  toggleNavigationMenu();
+};
+
+// Toggle navigation
+function toggleNavigationMenu() {
+  // active nav menu
+  const navMenu = document.getElementsByClassName("nav-menu")[0];
+  navMenu.classList.toggle("active");
+};
+
+
+function toggleIndicator() {
+  const indicator = document.getElementsByClassName("scroll-down-container")[0];
+  indicator.classList.toggle("hidden");
+};
+
+const navToggleLabel = document.getElementsByClassName("nav-toggle-button")[0];
+navToggleLabel.addEventListener("click", toggleHamburger);
+
+const navMenuItems = document.getElementsByClassName("nav-menu-item");
+for (item of navMenuItems) {
+  item.addEventListener("click", toggleHamburger);
+};
+// navMenuItems.forEach(e => e.addEventListener("click", toggleNavigationMenu));
+
+// remove 'active' class from nav-menu-item
+function resetNavMenuItem() {
+  const navItems = document.getElementsByClassName("nav-menu-item");
+  for (let i = 0; i < navItems.length; ++i) {
+    navItems[i].classList.remove("active");
+  }
+};
+
+const navMenuItemHome = document.getElementById("nav-menu-item-home");
+const navMenuItemPortfolio = document.getElementById("nav-menu-item-portfolio");
+const navMenuItemAbout = document.getElementById("nav-menu-item-about");
+const navMenuItemFAQs = document.getElementById("nav-menu-item-faqs");
+const navMenuItemContact = document.getElementById("nav-menu-item-contact");
+// add 'active' class to nav-menu-item corresponding which section is visible
+function activeNavMenuItem(section) {
+  let navItem = null;
+  switch (section.id) {
+    case "home":
+      navItem = navMenuItemHome;
+      break;
+    case "portfolio":
+      navItem = navMenuItemPortfolio;
+      break;
+    case "about":
+      navItem = navMenuItemAbout;
+      break;
+    case "faqs":
+      navItem = navMenuItemFAQs;
+      break;
+    case "contact":
+      navItem = navMenuItemContact;
+      break;
+    default:
+      console.log(`activeNavMenuItem(): unhandled section '${section.id}'`);
+      break;
+  }
+  if (navItem !== null) {
+    resetNavMenuItem();
+    navItem.classList.add("active");
+  }
+};
+
+const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // if (entry.intersectionRect.height / window.innerHeight > 0.5) {
+      activeNavMenuItem(entry.target);
+      // }
+    }
+  });
+}, {
+  root: null, // use browser viewport as default
+  // rootMargin: "0px",
+  rootMargin: "-40% 0% -40% 0%",
+  // threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9] // just in case some sections grow too large
+  threshold: 0.0
+});
+
+// set up section observer for each section
+const sections = document.getElementsByTagName("section");
+for (let i = 0; i < sections.length; ++i) {
+  sectionObserver.observe(sections[i]);
+};
+
+
+const scrollDownIndicator = document.getElementsByClassName("scroll-down-container")[0];
+// show the indicator in the home page
+function showIndicator() {
+  scrollDownIndicator.classList.remove("hidden");
+};
+
+// hide the indicator in the home page
+function hideIndicator() {
+  scrollDownIndicator.classList.add("hidden");
+};
+
+// toggle the scrolldown indicator based on scrolling
+window.onscroll = () => this.scrollY === 0 ? showIndicator() : hideIndicator();
+
+// NAVIGATION
+// -----------------------------------------------------------------------------------
+
+const availabilityLink = document.getElementById("availability-link");
+const setAvailabilityLink = (available) => {
+  const classList = availabilityLink.classList;
+  if (available) {
+    classList.add("active");
+  }
+  else {
+    classList.remove("active");
+  }
+};
+
+// -----------------------------------------------------------------------------------
+// PERSON CARD 
+
 
 
 // set the person card information
 function setPersonCard(data) {
   const personCard = document.getElementsByClassName("person-card")[0];
   personCard.innerHTML = data;
-}
+};
 
 // remove 'active' class from person-card-btn
 function resetPersonCardBtn() {
   const personCardBtns = document.getElementsByClassName("person-card-btn");
   for (let i = 0; i < personCardBtns.length; ++i) {
-    let cl = personCardBtns[i].classList;
-    if (cl.contains("active")) {
-      cl.remove("active");
-    }
+    personCardBtns[i].classList.remove("active");
   }
-}
+};
 
 // change the person card information to the new language
 function changeLanguage(elementID, data) {
@@ -257,7 +299,7 @@ function changeLanguage(elementID, data) {
   resetPersonCardBtn();
   document.getElementById(elementID).classList.add("active"); // update the selected button
   setNewSkillToHTML();
-}
+};
 
 // set listener to person card buttons
 // js
@@ -266,9 +308,9 @@ document.getElementById(jsBtnID).addEventListener("click", _ => {
   const data =
     `<pre><span class="code-keyword">class</span> <span class="code-class">Person</span> {</pre>
     <pre>   <span class="code-keyword">constructor</span>() {</pre>
-    <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">name</span>     = <span class="code-value">"Minh"</span>;</pre>
-    <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"&male;"</span>;</pre>
-    <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
+    <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">name</span>     = <span class="code-value">"${myInfo.name}"</span>;</pre>
+    <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"${myInfo.gender}"</span>;</pre>
+    <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">location</span> = <span class="code-value">"${myInfo.location}"</span>;</pre>
     <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">skills</span>   = [ <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span> ];</pre>
     <pre>   }</pre>
     <pre>}</pre>`;
@@ -281,9 +323,9 @@ document.getElementById(cppBtnID).addEventListener("click", _ => {
     `<pre><span class="code-keyword">class</span> <span class="code-class">Person</span> {</pre>
     <pre><span class="code-keyword">public</span>:</pre>
     <pre>   <span class="code-class">Person</span>()</pre>
-    <pre>   : <span class="code-attribute">_name</span>     { <span class="code-value">"Minh"</span> },</pre>
-    <pre>     <span class="code-attribute">_gender</span>   { <span class="code-value">"&male;"</span> },</pre>
-    <pre>     <span class="code-attribute">_location</span> { <span class="code-value">"&#127464;&#127462;🍁"</span> },</pre>
+    <pre>   : <span class="code-attribute">_name</span>     { <span class="code-value">"${myInfo.name}"</span> },</pre>
+    <pre>     <span class="code-attribute">_gender</span>   { <span class="code-value">"${myInfo.gender}"</span> },</pre>
+    <pre>     <span class="code-attribute">_location</span> { <span class="code-value">"${myInfo.location}"</span> },</pre>
     <pre>     <span class="code-attribute">_skills</span>   { <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span> }</pre>
     <pre>   { }</pre>
     <pre>};</pre>`;
@@ -296,9 +338,9 @@ document.getElementById(pythonBtnID).addEventListener("click", _ => {
   const data =
     `<pre><span class="code-keyword">class</span> <span class="code-class">Person</span>:</pre>
   <pre>   <span class="code-keyword">def</span> <span class="code-attribute">__init__</span>(<span class="code-keyword">self</span>):</pre>
-  <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">name</span>     = <span class="code-value">"Minh"</span></pre>
-  <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"&male;"</span></pre>
-  <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span></pre>
+  <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">name</span>     = <span class="code-value">"${myInfo.name}"</span></pre>
+  <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"${myInfo.gender}"</span></pre>
+  <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">location</span> = <span class="code-value">"${myInfo.location}"</span></pre>
   <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">skills</span>   = [ <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span> ]</pre>`;
   changeLanguage(pythonBtnID, data)
 });
@@ -308,9 +350,9 @@ document.getElementById(csharpBtnID).addEventListener("click", _ => {
   const data =
     `<pre><span class="code-keyword">class</span> <span class="code-class">Person</span> {</pre>
       <pre>  <span class="code-keyword">public</span> <span class="code-class">Person</span>() {</pre>
-      <pre>    <span class="code-attribute">Name</span>     = <span class="code-value">"Minh"</span>;</pre>
-      <pre>    <span class="code-attribute">Gender</span>   = <span class="code-value">"&male;"</span>;</pre>
-      <pre>    <span class="code-attribute">Location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
+      <pre>    <span class="code-attribute">Name</span>     = <span class="code-value">"${myInfo.name}"</span>;</pre>
+      <pre>    <span class="code-attribute">Gender</span>   = <span class="code-value">"${myInfo.gender}"</span>;</pre>
+      <pre>    <span class="code-attribute">Location</span> = <span class="code-value">"${myInfo.location}"</span>;</pre>
       <pre>    <span class="code-attribute">Skills</span>   = <span class="code-keyword">new</span> <span class="code-class">List</span>&lt;<span class="code-class">string</span>&gt; {</pre>
       <pre>      <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span></pre>
       <pre>    };</pre>
@@ -324,9 +366,9 @@ document.getElementById(javaBtnID).addEventListener("click", _ => {
   const data =
     `<pre><span class="code-keyword">class</span> <span class="code-class">Person</span> {</pre>
       <pre>  <span class="code-keyword">public</span> <span class="code-class">Person</span>() {</pre>
-      <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">name</span>     = <span class="code-value">"Minh"</span>;</pre>
-      <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"&male;"</span>;</pre>
-      <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
+      <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">name</span>     = <span class="code-value">"${myInfo.name}"</span>;</pre>
+      <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"${myInfo.gender}"</span>;</pre>
+      <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">location</span> = <span class="code-value">"${myInfo.location}"</span>;</pre>
       <pre>    <span class="code-keyword">this</span>.<span class="code-attribute">skills</span>   = <span class="code-keyword">new</span> <span class="code-class">Vector</span>&lt;&gt;() {{</pre>
       <pre>      add(<span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span>);</pre>
       <pre>    }};</pre>
@@ -395,7 +437,7 @@ function buildContactFormAgreement() {
   }
   const day = (['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'])[myTimeZone.getDay()];
   return `I am sure that there is no misspelling in my input, and I am totally aware that it is about ${hrs}:${mins} ${postfix} on ${day} in Ontario, CA.`;
-}
+};
 
 // set the statement to the html element
 const contactFormAgreement = document.getElementById("contact-form-agreement");
@@ -427,13 +469,13 @@ const contactFormMessageError = document.getElementById("contact-form-message-er
 // return true is valid (not empty), false otherwise
 function isContactFormNameValid() {
   return (contactFormName.value.trim().length > 0) ? true : false;
-}
+};
 
 function valivateContactFormName() {
   isContactFormNameValid()
     ? contactFormNameError.classList.remove("active")
     : contactFormNameError.classList.add("active");
-}
+};
 
 // regex for most email (not all)
 const emailRegEx = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
@@ -442,25 +484,25 @@ const emailRegEx = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{
 function isContactFormEmailValid() {
   const val = contactFormEmail.value.trim().toLowerCase();
   return emailRegEx.test(val);
-}
+};
 
 function validateContactFormEmail() {
   isContactFormEmailValid()
     ? contactFormEmailError.classList.remove("active")
     : contactFormEmailError.classList.add("active");
-}
+};
 
 // check if the message in contact form is valid
 // return true is valid (not empty), false otherwise
 function isContactFormMessageValid() {
   return (contactFormMessage.value.trim().length > 0) ? true : false;
-}
+};
 
 function validateContactFormMessage() {
   isContactFormMessageValid()
     ? contactFormMessageError.classList.remove("active")
     : contactFormMessageError.classList.add("active");
-}
+};
 
 const contactFormCheckBox = document.getElementById("contact-form-checkbox");
 function resetContactForm() {
@@ -479,7 +521,7 @@ function resetContactForm() {
   // disable submit button
   submitBtn.classList.remove("active");
   submitBtn.disabled = true;
-}
+};
 
 let firstTimeInput = true;
 const contactFormBtnError = document.getElementById("contact-form-btn-error");
@@ -493,16 +535,16 @@ submitBtn.addEventListener("click", (e) => {
       method: "POST",
       body: new FormData(contactForm)
     })
-    .then(response => {
-      resetContactForm();
-      contactFormBtnError.innerHTML = "Your input has been pushed successfully!";
-      // console.log("Success!", response);
-    })
-    .catch(error => {
-      resetContactForm();
-      contactFormBtnError.innerHTML = "Oops, something went wrong!";
-      // console.error("Error!", error.message);
-    });
+      .then(response => {
+        resetContactForm();
+        contactFormBtnError.innerHTML = "Your input has been pushed successfully!";
+        // console.log("Success!", response);
+      })
+      .catch(error => {
+        resetContactForm();
+        contactFormBtnError.innerHTML = "Oops, something went wrong!";
+        // console.error("Error!", error.message);
+      });
   }
   else {
     contactFormBtnError.innerHTML = "Please correct errors and try again.";
@@ -523,11 +565,13 @@ submitBtn.addEventListener("click", (e) => {
 
 // -----------------------------------------------------------------------------------
 // HI THERE
-console.log(`        
+console.log(`${"%c"}        
    __ ___   ________              
   / // (_) /_  __/ /  ___ _______ 
  / _  / /   / / / _ \/ -_) __/ -_)
 /_//_/_/   /_/ /_//_/\__/_/  \__/ 
                              
 😊
-`);
+`, "color:#20639B");
+
+

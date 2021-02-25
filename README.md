@@ -13,6 +13,10 @@
 
 ## Changelog
 
+### Version 1.3.0 - 25/02/2021
+- Added loading screen
+- Fetched data
+
 ### Version 1.2.3 - 20/02/2021
 - Added some meta tags
 - Animated texts are no longer in random order

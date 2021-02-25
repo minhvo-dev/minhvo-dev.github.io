@@ -29,791 +29,804 @@
 </head>
 
 <body class="">
-  <noscript>For full functionality of this page, it is necessary to enable JavaScript. Here are the <a
-      href="http://www.enable-javascript.com" target="_blank"> instructions how to enable JavaScript in your web
-      browser</a></noscript>
-  <!-- Header  -->
-  <header>
-    <div class="nav-container rotating-background">
-      <!-- logo  -->
-      <a class="logo" href="#home">M</a>
-      <!-- nav toggle button -->
+  <!-- loading screen -->
+  <div id="preloader">
+    <p>M</p>
+    <p>M</p>
+    <p>M</p>
+    <div id="spinner"></div>
+  </div>
+  <!-- content page -->
+  <div id="content-page">
+    <noscript>For full functionality of this page, it is necessary to enable JavaScript. Here are the <a
+        href="http://www.enable-javascript.com" target="_blank"> instructions how to enable JavaScript in your web
+        browser</a></noscript>
+    <!-- Header  -->
+    <header>
+      <div class="nav-container rotating-background">
+        <!-- logo  -->
+        <a class="logo" href="#home">M</a>
+        <!-- nav toggle button -->
 
-      <div class="nav-toggle-button">
-        <div class="hamburger">
-          <div class="hamburger-bar"></div>
-        </div>
-      </div>
-
-      <nav class="nav-menu">
-        <ul>
-          <li id="nav-menu-item-home" class="nav-menu-item"><a href="#home">Home</a></li>
-          <li id="nav-menu-item-portfolio" class="nav-menu-item"><a href="#portfolio">Portfolio</a></li>
-          <li id="nav-menu-item-about" class="nav-menu-item"><a href="#about">About</a></li>
-          <li id="nav-menu-item-faqs" class="nav-menu-item"><a href="#faqs">FAQs</a></li>
-          <li id="nav-menu-item-contact" class="nav-menu-item"><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Main  -->
-  <main>
-    <!-- Home -->
-    <section id="home" class="rotating-background">
-      <div class="home-container">
-        <!-- introduction -->
-        <div class="home-intro">
-          <p><i>Hi, I'm</i></p>
-          <h2>Tue-Minh Dinh Vo</h2>
-          <h1>Computer Science Student</h1>
-          <hr />
-          <div class="social-container">
-            <ul>
-              <li>
-                <a title="LinkedIn" href="//www.linkedin.com/in/tue-minh-dinh-vo/" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
-                    </path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a title="GitHub" href="//github.com/minhvo-dev" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-                    </path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a title="HackerRank" href="//www.hackerrank.com/tue_minh" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M477.5 128C463 103.05 285.13 0 256.16 0S49.25 102.79 34.84 128s-14.49 230.8 0 256 192.38 128 221.32 128S463 409.08 477.49 384s14.51-231 .01-256zM316.13 414.22c-4 0-40.91-35.77-38-38.69.87-.87 6.26-1.48 17.55-1.83 0-26.23.59-68.59.94-86.32 0-2-.44-3.43-.44-5.85h-79.93c0 7.1-.46 36.2 1.37 72.88.23 4.54-1.58 6-5.74 5.94-10.13 0-20.27-.11-30.41-.08-4.1 0-5.87-1.53-5.74-6.11.92-33.44 3-84-.15-212.67v-3.17c-9.67-.35-16.38-1-17.26-1.84-2.92-2.92 34.54-38.69 38.49-38.69s41.17 35.78 38.27 38.69c-.87.87-7.9 1.49-16.77 1.84v3.16c-2.42 25.75-2 79.59-2.63 105.39h80.26c0-4.55.39-34.74-1.2-83.64-.1-3.39.95-5.17 4.21-5.2 11.07-.08 22.15-.13 33.23-.06 3.46 0 4.57 1.72 4.5 5.38C333 354.64 336 341.29 336 373.69c8.87.35 16.82 1 17.69 1.84 2.88 2.91-33.62 38.69-37.58 38.69z">
-                    </path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a title="Twitter" href="//twitter.com/minhvo_dev" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                    </path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a title="Facebook" href="//www.facebook.com/tueminhdinhvo/" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
-                    </path>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-            </nav>
-          </div>
-          <div class="special-btn">
-            <a href="https://drive.google.com/file/d/1DW8MIwObmwI4adTsw5C_cVq1SJWBFWnu/view?usp=sharing"
-              target="_blank">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Résumé
-            </a>
-          </div>
-
-          <a class="animation-link" href="#contact">I am available for new opportunities &rarr;</a>
-
-        </div>
-        <!-- person card  -->
-        <div class="person-card-container">
-          <!-- code  -->
-          <div class="person-card">
-            <pre><span class="code-keyword">class</span> <span class="code-class">Person</span> {</pre>
-            <pre>   <span class="code-keyword">constructor</span>() {</pre>
-            <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">name</span>     = <span class="code-value">"Minh"</span>;</pre>
-            <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"&male;"</span>;</pre>
-            <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
-            <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">skills</span>   = [ <span class="code-value">"</span><span class="code-value" id="person-card__skill"></span><span class="code-value">"</span> ];</pre>
-            <pre>   }</pre>
-            <pre>}</pre>
-          </div>
-
-          <!-- buttons -->
-          <div class="person-card-control">
-            <button class="person-card-btn active" id="person-card-control__javascript-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                <path fill="currentColor"
-                  d="M43.334,4H6.667C5.196,4,4,5.196,4,6.667v36.666C4,44.804,5.196,46,6.667,46h36.666C44.804,46,46,44.804,46,43.334V6.667C46,5.196,44.804,4,43.334,4z M27,36.182C27,40.18,24.656,42,21.234,42c-3.092,0-5.324-2.073-6.234-4l3.143-1.903C18.75,37.173,19.673,38,21,38c1.269,0,2-0.496,2-2.426V23h4V36.182z M35.677,42c-3.544,0-5.557-1.787-6.677-4l3-2c0.818,1.335,1.707,2.614,3.589,2.614c1.581,0,2.411-0.79,2.411-1.882c0-1.308-0.858-1.772-2.598-2.533l-0.954-0.409c-2.753-1.173-4.583-2.643-4.583-5.749c0-2.862,2.18-5.04,5.588-5.04c2.426,0,4.17,0.844,5.427,3.055l-2.971,1.908c-0.654-1.173-1.36-1.635-2.456-1.635c-1.118,0-1.826,0.709-1.826,1.635c0,1.145,0.709,1.608,2.346,2.317l0.954,0.409C40.17,32.079,42,33.496,42,36.683C42,40.118,39.301,42,35.677,42z" />
-              </svg>
-            </button>
-            <button class="person-card-btn" id="person-card-control__cpp-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                <path fill="currentColor"
-                  d="M43.911,12.003L43.911,12.003L27.069,2.54c-1.276-0.717-2.861-0.717-4.138,0L6.089,12.003C4.801,12.727,4,14.081,4,15.537v18.927c0,1.455,0.8,2.809,2.089,3.533l16.842,9.464c0.638,0.358,1.354,0.538,2.069,0.538s1.431-0.179,2.069-0.538l16.842-9.463C45.2,37.272,46,35.918,46,34.463V15.537C46,14.081,45.199,12.727,43.911,12.003z M25,37c-6.617,0-12-5.383-12-12s5.383-12,12-12c3.78,0,7.275,1.755,9.542,4.741l-4.38,2.536C28.844,18.837,26.973,18,25,18c-3.86,0-7,3.14-7,7s3.14,7,7,7c1.973,0,3.844-0.837,5.162-2.277l4.38,2.536C32.275,35.245,28.78,37,25,37z M37,26h-2v2h-2v-2h-2v-2h2v-2h2v2h2V26z M44,26h-2v2h-2v-2h-2v-2h2v-2h2v2h2V26z" />
-              </svg>
-            </button>
-            <button class="person-card-btn" id="person-card-control__python-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                <path fill="currentColor"
-                  d="M24.5,2C15.8,2,14,6.5,14,9.1V14h10v1H9.1C5.8,15,2,17.6,2,25s3.8,10,7.1,10H15v-6c0-2.2,1.8-4,4-4l12,0c1.7,0,3-1.3,3-3V9.1C34,5.6,30.7,2,24.5,2z M20,11c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2c1.1,0,2,0.9,2,2C22,10.1,21.1,11,20,11z" />
-                <path fill="currentColor"
-                  d="M25.5,48c8.7,0,10.5-4.5,10.5-7.1V36H26v-1h14.9c3.3,0,7.1-2.6,7.1-10s-3.8-10-7.1-10H35v7c0,2.2-1.8,4-4,4l-12,0c-1.7,0-3,1.3-3,3v11.9C16,44.4,19.3,48,25.5,48z M30,39c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2c-1.1,0-2-0.9-2-2C28,39.9,28.9,39,30,39z" />
-              </svg>
-            </button>
-            <button class="person-card-btn" id="person-card-control__csharp-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                <path fill="currentColor" d="M37 24H39V26H37z" />
-                <path fill="currentColor"
-                  d="M43.911,12.003L27.069,2.54c-1.276-0.717-2.861-0.717-4.138,0L6.089,12.003C4.801,12.727,4,14.081,4,15.537v18.927c0,1.455,0.8,2.809,2.089,3.533l16.842,9.464c0.638,0.358,1.354,0.538,2.069,0.538s1.431-0.179,2.069-0.538l16.842-9.463C45.2,37.272,46,35.918,46,34.463V15.537C46,14.081,45.199,12.727,43.911,12.003z M25,37c-6.617,0-12-5.383-12-12s5.383-12,12-12c3.78,0,7.275,1.755,9.542,4.741l-4.38,2.536C28.844,18.837,26.973,18,25,18c-3.86,0-7,3.14-7,7s3.14,7,7,7c1.973,0,3.844-0.837,5.162-2.277l4.38,2.536C32.275,35.245,28.78,37,25,37z M43,24h-2v2h2v2h-2v2h-2v-2h-2v2h-2v-2h-2v-2h2v-2h-2v-2h2v-2h2v2h2v-2h2v2h2V24z" />
-              </svg>
-            </button>
-            <button class="person-card-btn" id="person-card-control__java-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                <path fill="currentColor"
-                  d="M24.646,26.121c-1.302-2.014-2.242-3.68-3.548-6.817c-2.208-5.306,13.433-10.1,7.087-19.306c2.75,6.363-9.863,10.291-11.034,15.593C16.075,20.462,24.639,26.121,24.646,26.121z" />
-                <path fill="currentColor"
-                  d="M24.942 16.583c-.251 3.148 2.903 4.828 2.993 7.119.073 1.871-1.885 3.428-1.885 3.428s3.552-.667 4.662-3.524c1.231-3.167-2.386-5.331-2.019-7.867.351-2.426 7.858-6.928 7.858-6.928S25.505 9.511 24.942 16.583zM35.625 26.315c2.283-.492 4.211.904 4.211 2.515 0 3.624-5.236 7.049-5.236 7.049s8.108-.927 8.108-6.881C42.708 25.065 38.725 24.084 35.625 26.315z" />
-                <path fill="currentColor"
-                  d="M31.779,29.24c0,0,2.529-1.73,3.201-2.376c-6.202,1.264-20.36,1.432-20.36,0.337c0-1.009,4.563-2.049,4.563-2.049s-10.12-0.139-10.12,2.726C9.064,30.869,22.315,31.08,31.779,29.24z" />
-                <path fill="currentColor"
-                  d="M30.223,31.96c-5.867,1.878-16.685,1.276-13.483-1.238c-1.554,0-3.87,1.202-3.87,2.357c0,2.325,11.693,4.115,20.349,0.719L30.223,31.96z" />
-                <path fill="currentColor"
-                  d="M18.18,35.922c-2.128,0-3.509,1.315-3.509,2.28c0,2.985,12.708,3.286,17.744,0.251l-3.2-2.037C25.454,38.007,16.008,38.222,18.18,35.922z" />
-                <path fill="currentColor"
-                  d="M40.89,40.924c0-1.167-1.374-1.721-1.87-1.986c2.901,6.718-29.052,6.196-29.052,2.233c0-0.904,2.347-1.787,4.525-1.365l-1.848-1.049c-4.335-0.655-7.279,1.171-7.279,2.648C5.365,48.281,40.89,47.95,40.89,40.924z" />
-                <path fill="currentColor"
-                  d="M44.635,43.25c-5.4,5.119-19.089,6.984-32.853,3.823C25.545,52.704,44.567,49.536,44.635,43.25z" />
-              </svg>
-            </button>
+        <div class="nav-toggle-button">
+          <div class="hamburger">
+            <div class="hamburger-bar"></div>
           </div>
         </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li id="nav-menu-item-home" class="nav-menu-item"><a href="#home">Home</a></li>
+            <li id="nav-menu-item-portfolio" class="nav-menu-item"><a href="#portfolio">Portfolio</a></li>
+            <li id="nav-menu-item-about" class="nav-menu-item"><a href="#about">About</a></li>
+            <li id="nav-menu-item-faqs" class="nav-menu-item"><a href="#faqs">FAQs</a></li>
+            <li id="nav-menu-item-contact" class="nav-menu-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <!-- indicator  -->
-      <div class="scroll-down-container">
-        <a href="#portfolio">
-          <div class="scroll-down-arrow"></div>
-          <div class="scroll-down-arrow"></div>
-          <div class="scroll-down-arrow"></div>
-        </a>
-      </div>
-    </section>
-    <!-- Portfolio -->
-    <section id="portfolio">
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <quote>the work of my hands</quote>
-        <hr>
-      </div>
-      <div class="section-container">
-        <!-- Intro  -->
-        <div class="portfolio-intro">
-          <div>
-            <h4>A handful collection of my works, which include:</h4>
-            <ul>
-              <li>
-                <p><span>Projects</span> : works that kept me <strong><i>away from my bed</i></strong>.</p>
-              </li>
-              <li>
-                <p><span>Toys</span> : fun and tiny applications that <strong><i>somehow work</i></strong>.</p>
-              </li>
-            </ul>
-            <p>For each project, <strong><code>case study</code></strong> is where you can find detailed explaination
-              about what I have done whereas <strong><code>demo</code></strong> contains a link to a live demonstration,
-              and <strong><code>code</code></strong> is where to find the implementation of the project. </p>
+    </header>
+
+    <!-- Main  -->
+    <main>
+      <!-- Home -->
+      <section id="home" class="rotating-background">
+        <div class="home-container">
+          <!-- introduction -->
+          <div class="home-intro">
+            <p><i>Hi, I'm</i></p>
+            <h2>Tue-Minh Dinh Vo</h2>
+            <h1>Computer Science Student</h1>
+            <hr />
+            <div class="social-container">
+              <ul>
+                <li>
+                  <a title="LinkedIn" href="//www.linkedin.com/in/tue-minh-dinh-vo/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                      </path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a title="GitHub" href="//github.com/minhvo-dev" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                      </path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a title="HackerRank" href="//www.hackerrank.com/tue_minh" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M477.5 128C463 103.05 285.13 0 256.16 0S49.25 102.79 34.84 128s-14.49 230.8 0 256 192.38 128 221.32 128S463 409.08 477.49 384s14.51-231 .01-256zM316.13 414.22c-4 0-40.91-35.77-38-38.69.87-.87 6.26-1.48 17.55-1.83 0-26.23.59-68.59.94-86.32 0-2-.44-3.43-.44-5.85h-79.93c0 7.1-.46 36.2 1.37 72.88.23 4.54-1.58 6-5.74 5.94-10.13 0-20.27-.11-30.41-.08-4.1 0-5.87-1.53-5.74-6.11.92-33.44 3-84-.15-212.67v-3.17c-9.67-.35-16.38-1-17.26-1.84-2.92-2.92 34.54-38.69 38.49-38.69s41.17 35.78 38.27 38.69c-.87.87-7.9 1.49-16.77 1.84v3.16c-2.42 25.75-2 79.59-2.63 105.39h80.26c0-4.55.39-34.74-1.2-83.64-.1-3.39.95-5.17 4.21-5.2 11.07-.08 22.15-.13 33.23-.06 3.46 0 4.57 1.72 4.5 5.38C333 354.64 336 341.29 336 373.69c8.87.35 16.82 1 17.69 1.84 2.88 2.91-33.62 38.69-37.58 38.69z">
+                      </path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a title="Twitter" href="//twitter.com/minhvo_dev" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                      </path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a title="Facebook" href="//www.facebook.com/tueminhdinhvo/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                      </path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              </nav>
+            </div>
+            <div class="special-btn">
+              <a href="https://drive.google.com/file/d/1DW8MIwObmwI4adTsw5C_cVq1SJWBFWnu/view?usp=sharing"
+                target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Résumé
+              </a>
+            </div>
+
+            <a class="animation-link active" href="#contact" id="availability-link">I am available for new opportunities
+              &rarr;</a>
+
           </div>
-          <aside>
-            <h3>Interest?</h3>
-            <p>To discovery more, plentiful of my works are available on</p>
-            <ul class="social-bag">
-              <li><a title="GitHub" href="//github.com/minhvo-dev" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-                    </path>
-                  </svg>
-                  GitHub
-                </a>
-              </li>
-              <li><a title="HackerRank" href="//www.hackerrank.com/tue_minh" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M477.5 128C463 103.05 285.13 0 256.16 0S49.25 102.79 34.84 128s-14.49 230.8 0 256 192.38 128 221.32 128S463 409.08 477.49 384s14.51-231 .01-256zM316.13 414.22c-4 0-40.91-35.77-38-38.69.87-.87 6.26-1.48 17.55-1.83 0-26.23.59-68.59.94-86.32 0-2-.44-3.43-.44-5.85h-79.93c0 7.1-.46 36.2 1.37 72.88.23 4.54-1.58 6-5.74 5.94-10.13 0-20.27-.11-30.41-.08-4.1 0-5.87-1.53-5.74-6.11.92-33.44 3-84-.15-212.67v-3.17c-9.67-.35-16.38-1-17.26-1.84-2.92-2.92 34.54-38.69 38.49-38.69s41.17 35.78 38.27 38.69c-.87.87-7.9 1.49-16.77 1.84v3.16c-2.42 25.75-2 79.59-2.63 105.39h80.26c0-4.55.39-34.74-1.2-83.64-.1-3.39.95-5.17 4.21-5.2 11.07-.08 22.15-.13 33.23-.06 3.46 0 4.57 1.72 4.5 5.38C333 354.64 336 341.29 336 373.69c8.87.35 16.82 1 17.69 1.84 2.88 2.91-33.62 38.69-37.58 38.69z">
-                    </path>
-                  </svg>
-                  HackerRank
-                </a>
-              </li>
-            </ul>
-          </aside>
+          <!-- person card  -->
+          <div class="person-card-container">
+            <!-- code  -->
+            <div class="person-card">
+              <pre><span class="code-keyword">class</span> <span class="code-class">Person</span> {</pre>
+              <pre>   <span class="code-keyword">constructor</span>() {</pre>
+              <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">name</span>     = <span class="code-value">"Minh"</span>;</pre>
+              <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"&male;"</span>;</pre>
+              <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">location</span> = <span class="code-value">"&#127464;&#127462;🍁"</span>;</pre>
+              <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">skills</span>   = [ <span class="code-value">"</span><span class="code-value" id="person-card__skill"></span><span class="code-value">"</span> ];</pre>
+              <pre>   }</pre>
+              <pre>}</pre>
+            </div>
+
+            <!-- buttons -->
+            <div class="person-card-control">
+              <button class="person-card-btn active" id="person-card-control__javascript-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="currentColor"
+                    d="M43.334,4H6.667C5.196,4,4,5.196,4,6.667v36.666C4,44.804,5.196,46,6.667,46h36.666C44.804,46,46,44.804,46,43.334V6.667C46,5.196,44.804,4,43.334,4z M27,36.182C27,40.18,24.656,42,21.234,42c-3.092,0-5.324-2.073-6.234-4l3.143-1.903C18.75,37.173,19.673,38,21,38c1.269,0,2-0.496,2-2.426V23h4V36.182z M35.677,42c-3.544,0-5.557-1.787-6.677-4l3-2c0.818,1.335,1.707,2.614,3.589,2.614c1.581,0,2.411-0.79,2.411-1.882c0-1.308-0.858-1.772-2.598-2.533l-0.954-0.409c-2.753-1.173-4.583-2.643-4.583-5.749c0-2.862,2.18-5.04,5.588-5.04c2.426,0,4.17,0.844,5.427,3.055l-2.971,1.908c-0.654-1.173-1.36-1.635-2.456-1.635c-1.118,0-1.826,0.709-1.826,1.635c0,1.145,0.709,1.608,2.346,2.317l0.954,0.409C40.17,32.079,42,33.496,42,36.683C42,40.118,39.301,42,35.677,42z" />
+                </svg>
+              </button>
+              <button class="person-card-btn" id="person-card-control__cpp-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="currentColor"
+                    d="M43.911,12.003L43.911,12.003L27.069,2.54c-1.276-0.717-2.861-0.717-4.138,0L6.089,12.003C4.801,12.727,4,14.081,4,15.537v18.927c0,1.455,0.8,2.809,2.089,3.533l16.842,9.464c0.638,0.358,1.354,0.538,2.069,0.538s1.431-0.179,2.069-0.538l16.842-9.463C45.2,37.272,46,35.918,46,34.463V15.537C46,14.081,45.199,12.727,43.911,12.003z M25,37c-6.617,0-12-5.383-12-12s5.383-12,12-12c3.78,0,7.275,1.755,9.542,4.741l-4.38,2.536C28.844,18.837,26.973,18,25,18c-3.86,0-7,3.14-7,7s3.14,7,7,7c1.973,0,3.844-0.837,5.162-2.277l4.38,2.536C32.275,35.245,28.78,37,25,37z M37,26h-2v2h-2v-2h-2v-2h2v-2h2v2h2V26z M44,26h-2v2h-2v-2h-2v-2h2v-2h2v2h2V26z" />
+                </svg>
+              </button>
+              <button class="person-card-btn" id="person-card-control__python-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="currentColor"
+                    d="M24.5,2C15.8,2,14,6.5,14,9.1V14h10v1H9.1C5.8,15,2,17.6,2,25s3.8,10,7.1,10H15v-6c0-2.2,1.8-4,4-4l12,0c1.7,0,3-1.3,3-3V9.1C34,5.6,30.7,2,24.5,2z M20,11c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2c1.1,0,2,0.9,2,2C22,10.1,21.1,11,20,11z" />
+                  <path fill="currentColor"
+                    d="M25.5,48c8.7,0,10.5-4.5,10.5-7.1V36H26v-1h14.9c3.3,0,7.1-2.6,7.1-10s-3.8-10-7.1-10H35v7c0,2.2-1.8,4-4,4l-12,0c-1.7,0-3,1.3-3,3v11.9C16,44.4,19.3,48,25.5,48z M30,39c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2c-1.1,0-2-0.9-2-2C28,39.9,28.9,39,30,39z" />
+                </svg>
+              </button>
+              <button class="person-card-btn" id="person-card-control__csharp-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="currentColor" d="M37 24H39V26H37z" />
+                  <path fill="currentColor"
+                    d="M43.911,12.003L27.069,2.54c-1.276-0.717-2.861-0.717-4.138,0L6.089,12.003C4.801,12.727,4,14.081,4,15.537v18.927c0,1.455,0.8,2.809,2.089,3.533l16.842,9.464c0.638,0.358,1.354,0.538,2.069,0.538s1.431-0.179,2.069-0.538l16.842-9.463C45.2,37.272,46,35.918,46,34.463V15.537C46,14.081,45.199,12.727,43.911,12.003z M25,37c-6.617,0-12-5.383-12-12s5.383-12,12-12c3.78,0,7.275,1.755,9.542,4.741l-4.38,2.536C28.844,18.837,26.973,18,25,18c-3.86,0-7,3.14-7,7s3.14,7,7,7c1.973,0,3.844-0.837,5.162-2.277l4.38,2.536C32.275,35.245,28.78,37,25,37z M43,24h-2v2h2v2h-2v2h-2v-2h-2v2h-2v-2h-2v-2h2v-2h-2v-2h2v-2h2v2h2v-2h2v2h2V24z" />
+                </svg>
+              </button>
+              <button class="person-card-btn" id="person-card-control__java-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="currentColor"
+                    d="M24.646,26.121c-1.302-2.014-2.242-3.68-3.548-6.817c-2.208-5.306,13.433-10.1,7.087-19.306c2.75,6.363-9.863,10.291-11.034,15.593C16.075,20.462,24.639,26.121,24.646,26.121z" />
+                  <path fill="currentColor"
+                    d="M24.942 16.583c-.251 3.148 2.903 4.828 2.993 7.119.073 1.871-1.885 3.428-1.885 3.428s3.552-.667 4.662-3.524c1.231-3.167-2.386-5.331-2.019-7.867.351-2.426 7.858-6.928 7.858-6.928S25.505 9.511 24.942 16.583zM35.625 26.315c2.283-.492 4.211.904 4.211 2.515 0 3.624-5.236 7.049-5.236 7.049s8.108-.927 8.108-6.881C42.708 25.065 38.725 24.084 35.625 26.315z" />
+                  <path fill="currentColor"
+                    d="M31.779,29.24c0,0,2.529-1.73,3.201-2.376c-6.202,1.264-20.36,1.432-20.36,0.337c0-1.009,4.563-2.049,4.563-2.049s-10.12-0.139-10.12,2.726C9.064,30.869,22.315,31.08,31.779,29.24z" />
+                  <path fill="currentColor"
+                    d="M30.223,31.96c-5.867,1.878-16.685,1.276-13.483-1.238c-1.554,0-3.87,1.202-3.87,2.357c0,2.325,11.693,4.115,20.349,0.719L30.223,31.96z" />
+                  <path fill="currentColor"
+                    d="M18.18,35.922c-2.128,0-3.509,1.315-3.509,2.28c0,2.985,12.708,3.286,17.744,0.251l-3.2-2.037C25.454,38.007,16.008,38.222,18.18,35.922z" />
+                  <path fill="currentColor"
+                    d="M40.89,40.924c0-1.167-1.374-1.721-1.87-1.986c2.901,6.718-29.052,6.196-29.052,2.233c0-0.904,2.347-1.787,4.525-1.365l-1.848-1.049c-4.335-0.655-7.279,1.171-7.279,2.648C5.365,48.281,40.89,47.95,40.89,40.924z" />
+                  <path fill="currentColor"
+                    d="M44.635,43.25c-5.4,5.119-19.089,6.984-32.853,3.823C25.545,52.704,44.567,49.536,44.635,43.25z" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-        <!-- Projects  -->
-        <div class="project-container">
-          <div class="project-head-line">
-            <h3>Projects</h3>
-            <hr>
+        <!-- indicator  -->
+        <div class="scroll-down-container">
+          <a href="#portfolio">
+            <div class="scroll-down-arrow"></div>
+            <div class="scroll-down-arrow"></div>
+            <div class="scroll-down-arrow"></div>
+          </a>
+        </div>
+      </section>
+      <!-- Portfolio -->
+      <section id="portfolio">
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <quote>the work of my hands</quote>
+          <hr>
+        </div>
+        <div class="section-container">
+          <!-- Intro  -->
+          <div class="portfolio-intro">
+            <div>
+              <h4>A handful collection of my works, which include:</h4>
+              <ul>
+                <li>
+                  <p><span>Projects</span> : works that kept me <strong><i>away from my bed</i></strong>.</p>
+                </li>
+                <li>
+                  <p><span>Toys</span> : fun and tiny applications that <strong><i>somehow work</i></strong>.</p>
+                </li>
+              </ul>
+              <p>For each project, <strong><code>case study</code></strong> is where you can find detailed explaination
+                about what I have done whereas <strong><code>demo</code></strong> contains a link to a live
+                demonstration,
+                and <strong><code>code</code></strong> is where to find the implementation of the project. </p>
+            </div>
+            <aside>
+              <h3>Interest?</h3>
+              <p>To discovery more, plentiful of my works are available on</p>
+              <ul class="social-bag">
+                <li><a title="GitHub" href="//github.com/minhvo-dev" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                      </path>
+                    </svg>
+                    GitHub
+                  </a>
+                </li>
+                <li><a title="HackerRank" href="//www.hackerrank.com/tue_minh" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M477.5 128C463 103.05 285.13 0 256.16 0S49.25 102.79 34.84 128s-14.49 230.8 0 256 192.38 128 221.32 128S463 409.08 477.49 384s14.51-231 .01-256zM316.13 414.22c-4 0-40.91-35.77-38-38.69.87-.87 6.26-1.48 17.55-1.83 0-26.23.59-68.59.94-86.32 0-2-.44-3.43-.44-5.85h-79.93c0 7.1-.46 36.2 1.37 72.88.23 4.54-1.58 6-5.74 5.94-10.13 0-20.27-.11-30.41-.08-4.1 0-5.87-1.53-5.74-6.11.92-33.44 3-84-.15-212.67v-3.17c-9.67-.35-16.38-1-17.26-1.84-2.92-2.92 34.54-38.69 38.49-38.69s41.17 35.78 38.27 38.69c-.87.87-7.9 1.49-16.77 1.84v3.16c-2.42 25.75-2 79.59-2.63 105.39h80.26c0-4.55.39-34.74-1.2-83.64-.1-3.39.95-5.17 4.21-5.2 11.07-.08 22.15-.13 33.23-.06 3.46 0 4.57 1.72 4.5 5.38C333 354.64 336 341.29 336 373.69c8.87.35 16.82 1 17.69 1.84 2.88 2.91-33.62 38.69-37.58 38.69z">
+                      </path>
+                    </svg>
+                    HackerRank
+                  </a>
+                </li>
+              </ul>
+            </aside>
           </div>
-          <!-- Project list -->
-          <div class="project-card-container">
-            <div class="project-card">
-              <img data-src="" src="https://unsplash.it/705/705" alt="" loading="lazy">
-              <div class="project-card-body">
-                <h3 class="project-card-title">Unreveiled Project</h3>
-                <p class="project-card-text">Description for this project is coming soon 😃</p>
-                <div class="project-card-meta">
-                  <span>Tag#1</span>
-                  <span>Tag#2</span>
+          <!-- Projects  -->
+          <div class="project-container">
+            <div class="project-head-line">
+              <h3>Projects</h3>
+              <hr>
+            </div>
+            <!-- Project list -->
+            <div class="project-card-container">
+              <div class="project-card">
+                <img data-src="" src="https://unsplash.it/705/705" alt="" loading="lazy">
+                <div class="project-card-body">
+                  <h3 class="project-card-title">Unreveiled Project</h3>
+                  <p class="project-card-text">Description for this project is coming soon 😃</p>
+                  <div class="project-card-meta">
+                    <span>Tag#1</span>
+                    <span>Tag#2</span>
+                  </div>
+                  <ul>
+                    <li><a class="animation-link" href="#">case study</a></li>
+                    <li><a class="animation-link" href="#">demo</a></li>
+                    <li><a class="animation-link" href="#">code</a></li>
+                  </ul>
                 </div>
-                <ul>
-                  <li><a class="animation-link" href="#">case study</a></li>
-                  <li><a class="animation-link" href="#">demo</a></li>
-                  <li><a class="animation-link" href="#">code</a></li>
-                </ul>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Toys  -->
-        <div class="project-container">
-          <div class="project-head-line">
-            <h3>Toys</h3>
-            <hr>
-          </div>
-          <!-- Toy list  -->
-          <div class="project-card-container">
-            <!-- Rate Repository App -->
-            <div class="project-card">
-              <img data-src="" src="./assets/img/toys/patientor_cover.jpg" alt="" loading="lazy">
-              <div class="project-card-body">
-                <h3 class="project-card-title">Patientor</h3>
-                <p class="project-card-text">Simple React application for doctors to record health information of their
-                  patients
-                </p>
-                <div class="project-card-meta">
-                  <span>MongoDB</span>
-                  <span>Express</span>
-                  <span>React</span>
-                  <span>Node.js</span>
+          <!-- Toys  -->
+          <div class="project-container">
+            <div class="project-head-line">
+              <h3>Toys</h3>
+              <hr>
+            </div>
+            <!-- Toy list  -->
+            <div class="project-card-container">
+              <!-- Rate Repository App -->
+              <div class="project-card">
+                <img data-src="" src="./assets/img/toys/patientor_cover.jpg" alt="" loading="lazy">
+                <div class="project-card-body">
+                  <h3 class="project-card-title">Patientor</h3>
+                  <p class="project-card-text">Simple React application for doctors to record health information of
+                    their
+                    patients
+                  </p>
+                  <div class="project-card-meta">
+                    <span>MongoDB</span>
+                    <span>Express</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                  </div>
+                  <ul>
+                    <li><a class="animation-link" href="https://gentle-island-42314.herokuapp.com/" title="Live website"
+                        target="_blank">demo</a></li>
+                    <li><a class="animation-link"
+                        href="https://github.com/minhvo-dev/MOOC.fi-Full-Stack-Open-2020/tree/dev/part_09/patientor"
+                        title="Source code on GitHub" target="_blank">code</a></li>
+                  </ul>
                 </div>
-                <ul>
-                  <li><a class="animation-link" href="https://gentle-island-42314.herokuapp.com/" title="Live website"
-                      target="_blank">demo</a></li>
-                  <li><a class="animation-link"
-                      href="https://github.com/minhvo-dev/MOOC.fi-Full-Stack-Open-2020/tree/dev/part_09/patientor"
-                      title="Source code on GitHub" target="_blank">code</a></li>
-                </ul>
               </div>
-            </div>
 
-            <!-- Rate Repository App -->
-            <div class="project-card">
-              <img data-src="" src="./assets/img/toys/rate_repository_app_cover.jpg" alt="" loading="lazy">
-              <div class="project-card-body">
-                <h3 class="project-card-title">Rate Repository App</h3>
-                <p class="project-card-text">React Native App which allows users to interact with GitHub repositories
-                </p>
-                <div class="project-card-meta">
-                  <span>React Native</span>
-                  <span>GraphQL</span>
-                  <span>Expo</span>
+              <!-- Rate Repository App -->
+              <div class="project-card">
+                <img data-src="" src="./assets/img/toys/rate_repository_app_cover.jpg" alt="" loading="lazy">
+                <div class="project-card-body">
+                  <h3 class="project-card-title">Rate Repository App</h3>
+                  <p class="project-card-text">React Native App which allows users to interact with GitHub repositories
+                  </p>
+                  <div class="project-card-meta">
+                    <span>React Native</span>
+                    <span>GraphQL</span>
+                    <span>Expo</span>
+                  </div>
+                  <ul>
+                    <li><a class="animation-link" href="https://github.com/minhvo-dev/MOOC.fi-React-Native-2020"
+                        title="Source code on GitHub" target="_blank">code</a></li>
+                  </ul>
                 </div>
-                <ul>
-                  <li><a class="animation-link" href="https://github.com/minhvo-dev/MOOC.fi-React-Native-2020"
-                      title="Source code on GitHub" target="_blank">code</a></li>
-                </ul>
               </div>
-            </div>
 
-            <!-- PokéMart -->
-            <div class="project-card">
-              <img data-src="" src="./assets/img/toys/pokemart_cover.jpg" alt="" loading="lazy">
-              <div class="project-card-body">
-                <h3 class="project-card-title">PokéMart</h3>
-                <p class="project-card-text">Mobile website which emulates an online ordering system</p>
-                <div class="project-card-meta">
-                  <span>Full-stack</span>
-                  <span>Vue</span>
-                  <span>.NET</span>
-                  <span>Azure</span>
+              <!-- PokéMart -->
+              <div class="project-card">
+                <img data-src="" src="./assets/img/toys/pokemart_cover.jpg" alt="" loading="lazy">
+                <div class="project-card-body">
+                  <h3 class="project-card-title">PokéMart</h3>
+                  <p class="project-card-text">Mobile website which emulates an online ordering system</p>
+                  <div class="project-card-meta">
+                    <span>Full-stack</span>
+                    <span>Vue</span>
+                    <span>.NET</span>
+                    <span>Azure</span>
+                  </div>
+                  <ul>
+                    <li><a class="animation-link" href="https://pokemart.azurewebsites.net" title="Live website"
+                        target="_blank">demo</a></li>
+                    <li><a class="animation-link" href="https://github.com/minhvo-dev/Vue.JS-ASP.NETCore-PokeMart"
+                        title="Source code on GitHub" target="_blank">code</a></li>
+                  </ul>
                 </div>
-                <ul>
-                  <li><a class="animation-link" href="https://pokemart.azurewebsites.net" title="Live website"
-                      target="_blank">demo</a></li>
-                  <li><a class="animation-link" href="https://github.com/minhvo-dev/Vue.JS-ASP.NETCore-PokeMart"
-                      title="Source code on GitHub" target="_blank">code</a></li>
-                </ul>
               </div>
-            </div>
-            <!-- Space station -->
-            <div class="project-card">
-              <img data-src="" src="./assets/img/toys/space_station_cover.jpg" alt="" loading="lazy">
-              <div class="project-card-body">
-                <h3 class="project-card-title">Space Station</h3>
-                <p class="project-card-text">C++ application which renders 3D models using modern C++ graphic API
-                  (OpenGL) and GLSL</p>
-                <div class="project-card-meta">
-                  <span>OpenGL</span>
-                  <span>C++</span>
-                  <span>GLSL</span>
+              <!-- Space station -->
+              <div class="project-card">
+                <img data-src="" src="./assets/img/toys/space_station_cover.jpg" alt="" loading="lazy">
+                <div class="project-card-body">
+                  <h3 class="project-card-title">Space Station</h3>
+                  <p class="project-card-text">C++ application which renders 3D models using modern C++ graphic API
+                    (OpenGL) and GLSL</p>
+                  <div class="project-card-meta">
+                    <span>OpenGL</span>
+                    <span>C++</span>
+                    <span>GLSL</span>
+                  </div>
+                  <ul>
+                    <li><a class="animation-link" href="//youtu.be/mwWT0cJzcBE" title="A short Youtube video"
+                        target="_blank">demo</a></li>
+                    <li><a class="animation-link" href="//github.com/minhvo-dev/OpenGL-Space-Station"
+                        title="Source code on GitHub" target="_blank">code</a></li>
+                  </ul>
                 </div>
-                <ul>
-                  <li><a class="animation-link" href="//youtu.be/mwWT0cJzcBE" title="A short Youtube video"
-                      target="_blank">demo</a></li>
-                  <li><a class="animation-link" href="//github.com/minhvo-dev/OpenGL-Space-Station"
-                      title="Source code on GitHub" target="_blank">code</a></li>
-                </ul>
               </div>
+
+
             </div>
-
-
           </div>
         </div>
-      </div>
-
-      </div>
-    </section>
-    <!-- About  -->
-    <section id="about">
-      <div class="section-title">
-        <h2>About</h2>
-        <quote>in a few words</quote>
-        <hr>
-      </div>
-
-      <div class="section-container">
-        <div class="about-intro">
-          <p>Hi, my name is <strong>Minh</strong>.</p>
-          <p>I am a computer science student in Ontario, Canada. I am currently learning Web Development, regularly
-            doing side projects and occationally solving programming challenges as I consider myself as a tireless
-            <del>sucker</del>, <i>*cough*</i>, seeker of knowledge.
-          </p>
-          <p>I have been typing on computer keyboards since I was a kid. Things never change. Me, neither... I'm no
-            longer a kid though.</p>
+      </section>
+      <!-- About  -->
+      <section id="about">
+        <div class="section-title">
+          <h2>About</h2>
+          <quote>in a few words</quote>
+          <hr>
         </div>
 
-        <div class="about-skill">
-          <!-- Languages -->
-          <div class="skill-container rotating-background">
-            <h3>Languages</h3>
-            <ul>
-              <!-- JavaScript -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/javascript_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>JavaScript</p>
-                  </div>
-                </div>
-              </li>
-              <!-- TypeScript -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/typescript_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>TypeScript</p>
-                  </div>
-                </div>
-              </li>
-              <!-- HTML5 -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/html5_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>HTML5</p>
-                  </div>
-                </div>
-              </li>
-              <!-- CSS3  -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/css3_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>CSS3</p>
-                  </div>
-                </div>
-              </li>
-              <!-- Python -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/python_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>Python</p>
-                  </div>
-                </div>
-              </li>
-              <!-- C# -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/csharp_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>C#</p>
-                  </div>
-                </div>
-              </li>
-              <!-- C++ -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/cpp_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>C++</p>
-                  </div>
-                </div>
-              </li>
-              <!-- Java -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/java_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>Java</p>
-                  </div>
-                </div>
-              </li>
-              <!-- SQL -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/sql_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>SQL & NoSQL</p>
-                  </div>
-                </div>
-              </li>
+        <div class="section-container">
+          <div class="about-intro">
+            <p>Hi, my name is <strong>Minh</strong>.</p>
+            <p>I am a computer science student in Ontario, Canada. I am currently learning Web Development, regularly
+              doing side projects and occationally solving programming challenges as I consider myself as a tireless
+              <del>sucker</del>, <i>*cough*</i>, seeker of knowledge.
+            </p>
+            <p>I have been typing on computer keyboards since I was a kid. Things never change. Me, neither... I'm no
+              longer a kid though.</p>
+          </div>
 
-            </ul>
-          </div>
-          <!-- Framework -->
-          <div class="skill-container rotating-background">
-            <h3>Frameworks</h3>
-            <ul>
-              <!-- Vue.JS -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/react_64px.png" alt="" srcset="" loading="lazy">
+          <div class="about-skill">
+            <!-- Languages -->
+            <div class="skill-container rotating-background">
+              <h3>Languages</h3>
+              <ul>
+                <!-- JavaScript -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/javascript_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>JavaScript</p>
+                    </div>
                   </div>
-                  <div class="skill-name">
-                    <p>React</p>
+                </li>
+                <!-- TypeScript -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/typescript_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>TypeScript</p>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <!-- GraphQL -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/graphql_64px.png" alt="" srcset="" loading="lazy">
+                </li>
+                <!-- HTML5 -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/html5_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>HTML5</p>
+                    </div>
                   </div>
-                  <div class="skill-name">
-                    <p>GraphQL</p>
+                </li>
+                <!-- CSS3  -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/css3_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>CSS3</p>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <!-- Express -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/expressjs_64px.png" alt="" srcset="" loading="lazy">
+                </li>
+                <!-- Python -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/python_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>Python</p>
+                    </div>
                   </div>
-                  <div class="skill-name">
-                    <p>Express.js</p>
+                </li>
+                <!-- C# -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/csharp_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>C#</p>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <!-- Vue.JS -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/vuejs_64px.png" alt="" srcset="" loading="lazy">
+                </li>
+                <!-- C++ -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/cpp_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>C++</p>
+                    </div>
                   </div>
-                  <div class="skill-name">
-                    <p>Vue.JS</p>
+                </li>
+                <!-- Java -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/java_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>Java</p>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <!-- .NET Core -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/dotnetcore_64px.png" alt="" srcset="" loading="lazy">
+                </li>
+                <!-- SQL -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/sql_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>SQL & NoSQL</p>
+                    </div>
                   </div>
-                  <div class="skill-name">
-                    <p>.NET Core</p>
-                  </div>
-                </div>
-              </li>
+                </li>
 
-            </ul>
-          </div>
-          <!-- Tools  -->
-          <div class="skill-container rotating-background">
-            <h3>Tools</h3>
-            <ul>
-              <!-- Node.js -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/nodejs_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>Node.js</p>
-                  </div>
-                </div>
-              </li>
-              <!-- MongoDB -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/mongodb_48px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>MongoDB</p>
-                  </div>
-                </div>
-              </li>
-              <!-- GIT -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/git_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>GIT</p>
-                  </div>
-                </div>
-              </li>
-              <!-- VS Code -->
-              <li>
-                <div class="skill-item">
-                  <div class="skill-icon">
-                    <img src="./assets/img/skill_icons/vscode_64px.png" alt="" srcset="" loading="lazy">
-                  </div>
-                  <div class="skill-name">
-                    <p>VS Code</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </section>
-    <!-- Faqs -->
-    <section id="faqs">
-      <div class="section-title">
-        <h2>FAQs</h2>
-        <quote>"he's doing his best"</quote>
-        <hr>
-      </div>
-      <div class="section-container">
-
-        <div class="speech-bubble-left-container">
-          <div class="speech-bubble-left">
-            <p>I see different names here and there. How should I call you? </p>
-          </div>
-        </div>
-        <div class="speech-bubble-right-container">
-          <div class="speech-bubble-right">
-            <p>I'd like to be called <i>Minh</i> <code>(ˈmɪn)</code> unless you could speak Vietnamese.</p>
-          </div>
-        </div>
-
-        <div class="speech-bubble-left-container">
-          <div class="speech-bubble-left">
-            <p>Are you interested in working on Open Source and/or Non-Profit projects? </p>
-          </div>
-        </div>
-        <div class="speech-bubble-right-container">
-          <div class="speech-bubble-right">
-            <p>The answer depends on my availability. Generally, yes unless I'm immensely busy.</p>
-          </div>
-        </div>
-
-        <div class="speech-bubble-left-container">
-          <div class="speech-bubble-left">
-            <p>Was this site created 100% by yourself? </p>
-          </div>
-        </div>
-        <div class="speech-bubble-right-container">
-          <div class="speech-bubble-right">
-            <p>Yes. Indeed, it was <i>handcrafted</i> without using any site builders and/or templates.</p>
-          </div>
-        </div>
-
-        <div class="speech-bubble-left-container">
-          <div class="speech-bubble-left">
-            <p>Why don't you use any frameworks like Bootstrap, TailwindCSS or Gatsby to build this site? </p>
-          </div>
-        </div>
-        <div class="speech-bubble-right-container">
-          <div class="speech-bubble-right">
-            <p>Learning CSS is really fun. Also, this is a simple and static site, so I'd love to take this opportunity
-              to enhance my fundamental knowledge and keep those powerful tools for other projects.</p>
-          </div>
-        </div>
-
-        <div class="speech-bubble-left-container">
-          <div class="speech-bubble-left">
-            <p>I am also a Pokémon GO Trainer, so you know ... </p>
-          </div>
-        </div>
-        <div class="speech-bubble-right-container">
-          <div class="speech-bubble-right">
-            <p>Don't hesitage to send me your Pokémon GO Trainer ID. We will be <i>best friends</i> in Pokémon GO in no
-              time 😉.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- Contact -->
-    <section id="contact">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <quote>say hello, buy me a milkshake or hire me</quote>
-        <hr>
-      </div>
-      <div class="section-container">
-        <!-- Contact card  -->
-        <div class="contact-card">
-          <h4>Get in touch to start a conversation.</h4>
-          <p>Please use the form to <strong><code>push</code></strong> your message into my inbox in high priority, so
-            that I can <strong><code>pull</code></strong> it asap.</p>
-          <br>
-          <h4>Also, you can find me on:</h4>
-          <!-- Social links  -->
-          <div class="social-bag-container">
-            <ul class="social-bag">
-              <li>
-                <a title="LinkedIn" href="//www.linkedin.com/in/tue-minh-dinh-vo/" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
-                    </path>
-                  </svg>
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a title="Twitter" href="//twitter.com/minhvo_dev" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                    </path>
-                  </svg>
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a title="Facebook" href="//www.facebook.com/tueminhdinhvo/" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
-                    </path>
-                  </svg>
-                  Facebook
-                </a>
-              </li>
-            </ul>
-
-            <ul class="social-bag">
-              <li>
-                <a title="GitHub" href="//github.com/minhvo-dev" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-                    </path>
-                  </svg>
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a title="HackerRank" href="//www.hackerrank.com/tue_minh" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                      d="M477.5 128C463 103.05 285.13 0 256.16 0S49.25 102.79 34.84 128s-14.49 230.8 0 256 192.38 128 221.32 128S463 409.08 477.49 384s14.51-231 .01-256zM316.13 414.22c-4 0-40.91-35.77-38-38.69.87-.87 6.26-1.48 17.55-1.83 0-26.23.59-68.59.94-86.32 0-2-.44-3.43-.44-5.85h-79.93c0 7.1-.46 36.2 1.37 72.88.23 4.54-1.58 6-5.74 5.94-10.13 0-20.27-.11-30.41-.08-4.1 0-5.87-1.53-5.74-6.11.92-33.44 3-84-.15-212.67v-3.17c-9.67-.35-16.38-1-17.26-1.84-2.92-2.92 34.54-38.69 38.49-38.69s41.17 35.78 38.27 38.69c-.87.87-7.9 1.49-16.77 1.84v3.16c-2.42 25.75-2 79.59-2.63 105.39h80.26c0-4.55.39-34.74-1.2-83.64-.1-3.39.95-5.17 4.21-5.2 11.07-.08 22.15-.13 33.23-.06 3.46 0 4.57 1.72 4.5 5.38C333 354.64 336 341.29 336 373.69c8.87.35 16.82 1 17.69 1.84 2.88 2.91-33.62 38.69-37.58 38.69z">
-                    </path>
-                  </svg>
-                  HackerRank
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Contact form  -->
-        <div class="contact-form-container rotating-background">
-          <form name="contact-form">
-            <h3>Let's talk</h3>
-            <div class="contact-form-field">
-              <label for="contact-form-name-input">Name</label>
-              <input class="field-element" type="text" name="name" id="contact-form-name-input">
-              <span class="field-error" id="contact-form-name-error">What should I call you, Mr. Anonymous or Ms.
-                Blank?</span>
+              </ul>
             </div>
-            <div class="contact-form-field">
-              <label for="contact-form-email-input">Email</label>
-              <input class="field-element" type="email" name="email" id="contact-form-email-input">
-              <span class="field-error" id="contact-form-email-error">I won't spam, I promise.</span>
+            <!-- Framework -->
+            <div class="skill-container rotating-background">
+              <h3>Frameworks</h3>
+              <ul>
+                <!-- Vue.JS -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/react_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>React</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- GraphQL -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/graphql_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>GraphQL</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- Express -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/expressjs_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>Express.js</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- Vue.JS -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/vuejs_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>Vue.JS</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- .NET Core -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/dotnetcore_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>.NET Core</p>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
             </div>
-            <div class="contact-form-field">
-              <label for="contact-form-message-input">Message</label>
-              <textarea class="field-element" name="message" id="contact-form-message-input"></textarea>
-              <span class="field-error" id="contact-form-message-error">Sorry, I haven't learned to read an invisible
-                message.</span>
+            <!-- Tools  -->
+            <div class="skill-container rotating-background">
+              <h3>Tools</h3>
+              <ul>
+                <!-- Node.js -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/nodejs_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>Node.js</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- MongoDB -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/mongodb_48px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>MongoDB</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- GIT -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/git_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>GIT</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- VS Code -->
+                <li>
+                  <div class="skill-item">
+                    <div class="skill-icon">
+                      <img src="./assets/img/skill_icons/vscode_64px.png" alt="" srcset="" loading="lazy">
+                    </div>
+                    <div class="skill-name">
+                      <p>VS Code</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="contact-form-field">
-              <div class="field-element">
-                <input type="checkbox" id="contact-form-checkbox">
-                <label for="contact-form-checkbox" id="contact-form-agreement">If you see this message, JavaScript is
-                  turned off in your browser. Please enable and reload the site in order to use the form.</label>
+          </div>
+      </section>
+      <!-- Faqs -->
+      <section id="faqs">
+        <div class="section-title">
+          <h2>FAQs</h2>
+          <quote>"he's doing his best"</quote>
+          <hr>
+        </div>
+        <div class="section-container">
+
+          <div class="speech-bubble-left-container">
+            <div class="speech-bubble-left">
+              <p>I see different names here and there. How should I call you? </p>
+            </div>
+          </div>
+          <div class="speech-bubble-right-container">
+            <div class="speech-bubble-right">
+              <p>I'd like to be called <i>Minh</i> <code>(ˈmɪn)</code> unless you could speak Vietnamese.</p>
+            </div>
+          </div>
+
+          <div class="speech-bubble-left-container">
+            <div class="speech-bubble-left">
+              <p>Are you interested in working on Open Source and/or Non-Profit projects? </p>
+            </div>
+          </div>
+          <div class="speech-bubble-right-container">
+            <div class="speech-bubble-right">
+              <p>The answer depends on my availability. Generally, yes unless I'm immensely busy.</p>
+            </div>
+          </div>
+
+          <div class="speech-bubble-left-container">
+            <div class="speech-bubble-left">
+              <p>Was this site created 100% by yourself? </p>
+            </div>
+          </div>
+          <div class="speech-bubble-right-container">
+            <div class="speech-bubble-right">
+              <p>Yes. Indeed, it was <i>handcrafted</i> without using any site builders and/or templates.</p>
+            </div>
+          </div>
+
+          <div class="speech-bubble-left-container">
+            <div class="speech-bubble-left">
+              <p>Why don't you use any frameworks like Bootstrap, TailwindCSS or Gatsby to build this site? </p>
+            </div>
+          </div>
+          <div class="speech-bubble-right-container">
+            <div class="speech-bubble-right">
+              <p>Learning CSS is really fun. Also, this is a simple and static site, so I'd love to take this
+                opportunity
+                to enhance my fundamental knowledge and keep those powerful tools for other projects.</p>
+            </div>
+          </div>
+
+          <div class="speech-bubble-left-container">
+            <div class="speech-bubble-left">
+              <p>I am also a Pokémon GO Trainer, so you know ... </p>
+            </div>
+          </div>
+          <div class="speech-bubble-right-container">
+            <div class="speech-bubble-right">
+              <p>Don't hesitage to send me your Pokémon GO Trainer ID. We will be <i>best friends</i> in Pokémon GO in
+                no
+                time 😉.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <quote>say hello, buy me a milkshake or hire me</quote>
+          <hr>
+        </div>
+        <div class="section-container">
+          <!-- Contact card  -->
+          <div class="contact-card">
+            <h4>Get in touch to start a conversation.</h4>
+            <p>Please use the form to <strong><code>push</code></strong> your message into my inbox in high priority, so
+              that I can <strong><code>pull</code></strong> it asap.</p>
+            <br>
+            <h4>Also, you can find me on:</h4>
+            <!-- Social links  -->
+            <div class="social-bag-container">
+              <ul class="social-bag">
+                <li>
+                  <a title="LinkedIn" href="//www.linkedin.com/in/tue-minh-dinh-vo/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                      </path>
+                    </svg>
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a title="Twitter" href="//twitter.com/minhvo_dev" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                      </path>
+                    </svg>
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a title="Facebook" href="//www.facebook.com/tueminhdinhvo/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                      </path>
+                    </svg>
+                    Facebook
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="social-bag">
+                <li>
+                  <a title="GitHub" href="//github.com/minhvo-dev" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                      </path>
+                    </svg>
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a title="HackerRank" href="//www.hackerrank.com/tue_minh" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M477.5 128C463 103.05 285.13 0 256.16 0S49.25 102.79 34.84 128s-14.49 230.8 0 256 192.38 128 221.32 128S463 409.08 477.49 384s14.51-231 .01-256zM316.13 414.22c-4 0-40.91-35.77-38-38.69.87-.87 6.26-1.48 17.55-1.83 0-26.23.59-68.59.94-86.32 0-2-.44-3.43-.44-5.85h-79.93c0 7.1-.46 36.2 1.37 72.88.23 4.54-1.58 6-5.74 5.94-10.13 0-20.27-.11-30.41-.08-4.1 0-5.87-1.53-5.74-6.11.92-33.44 3-84-.15-212.67v-3.17c-9.67-.35-16.38-1-17.26-1.84-2.92-2.92 34.54-38.69 38.49-38.69s41.17 35.78 38.27 38.69c-.87.87-7.9 1.49-16.77 1.84v3.16c-2.42 25.75-2 79.59-2.63 105.39h80.26c0-4.55.39-34.74-1.2-83.64-.1-3.39.95-5.17 4.21-5.2 11.07-.08 22.15-.13 33.23-.06 3.46 0 4.57 1.72 4.5 5.38C333 354.64 336 341.29 336 373.69c8.87.35 16.82 1 17.69 1.84 2.88 2.91-33.62 38.69-37.58 38.69z">
+                      </path>
+                    </svg>
+                    HackerRank
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Contact form  -->
+          <div class="contact-form-container rotating-background">
+            <form name="contact-form">
+              <h3>Let's talk</h3>
+              <div class="contact-form-field">
+                <label for="contact-form-name-input">Name</label>
+                <input class="field-element" type="text" name="name" id="contact-form-name-input">
+                <span class="field-error" id="contact-form-name-error">What should I call you, Mr. Anonymous or Ms.
+                  Blank?</span>
               </div>
-            </div>
-            <div class="contact-form-field">
-              <div class="field-element">
-                <button class="" id="contact-form-submit-btn" type="submit" disabled>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path fill="currentColor"
-                      d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z">
-                    </path>
-                  </svg>
-                </button>
+              <div class="contact-form-field">
+                <label for="contact-form-email-input">Email</label>
+                <input class="field-element" type="email" name="email" id="contact-form-email-input">
+                <span class="field-error" id="contact-form-email-error">I won't spam, I promise.</span>
               </div>
-              <span class="field-error" id="contact-form-btn-error">Please correct errors and try again.</span>
-            </div>
-          </form>
+              <div class="contact-form-field">
+                <label for="contact-form-message-input">Message</label>
+                <textarea class="field-element" name="message" id="contact-form-message-input"></textarea>
+                <span class="field-error" id="contact-form-message-error">Sorry, I haven't learned to read an invisible
+                  message.</span>
+              </div>
+              <div class="contact-form-field">
+                <div class="field-element">
+                  <input type="checkbox" id="contact-form-checkbox">
+                  <label for="contact-form-checkbox" id="contact-form-agreement">If you see this message, JavaScript is
+                    turned off in your browser. Please enable and reload the site in order to use the form.</label>
+                </div>
+              </div>
+              <div class="contact-form-field">
+                <div class="field-element">
+                  <button class="" id="contact-form-submit-btn" type="submit" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path fill="currentColor"
+                        d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+                <span class="field-error" id="contact-form-btn-error">Please correct errors and try again.</span>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-  </main>
+    <!-- Footer  -->
+    <footer class="rotating-background">
+      <p><a class="logo" href="#home">M</a></p>
+      <p><small>&copy;2020-2021 Tue-Minh Dinh Vo. All <del>rice</del> rights reserved.</small></p>
+      <p><small>Made by &#9995; with &#128151;</small></p>
+    </footer>
 
-  <!-- Footer  -->
-  <footer class="rotating-background">
-    <p><a class="logo" href="#home">M</a></p>
-    <p><small>&copy;2020-2021 Tue-Minh Dinh Vo. All <del>rice</del> rights reserved.</small></p>
-    <p><small>Made by &#9995; with &#128151;</small></p>
-  </footer>
+  </div>
 
   <!-- Scripts  -->
   <script src="./js/main.js"></script>
