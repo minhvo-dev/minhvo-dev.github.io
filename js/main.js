@@ -121,9 +121,9 @@ const fetchData = fetch("https://aqueous-scrubland-74133.herokuapp.com/", {
         skills
         availability
       } 
-    }`
-  }),
-  variables: {}
+    }`,
+    variables: {}
+  })
 });
 // let's wait at least 2 sec
 Promise.all([fetchData, new Promise((resolve) => setTimeout(resolve, 2000))])
@@ -141,7 +141,7 @@ Promise.all([fetchData, new Promise((resolve) => setTimeout(resolve, 2000))])
   })
   .catch(err => console.log(err));
 
-  // FETCHING DATA
+// FETCHING DATA
 // -----------------------------------------------------------------------------------
 
 

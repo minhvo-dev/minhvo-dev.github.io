@@ -13,6 +13,9 @@
 
 ## Changelog
 
+### Version 1.3.1 - 01/03/2021
+- Fixed fetch query
+
 ### Version 1.3.0 - 25/02/2021
 - Added loading screen
 - Fetched data
