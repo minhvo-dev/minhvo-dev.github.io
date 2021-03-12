@@ -13,6 +13,11 @@
 
 ## Changelog
 
+### Version 1.3.2 - 12/03/2021
+- Added Worldwide Travel Alert app
+- Removed descriptions of toys
+- Fixed Patientor app link
+
 ### Version 1.3.1 - 01/03/2021
 - Fixed fetch query
 
