@@ -13,10 +13,17 @@
 
 ## Changelog
 
+### Version 1.3.4 - 10/04/2021
+- Added Contacts+ app
+- Modified h1 and h2 tags
+- Fixed skill-icon class
+- Removed title in home page
+
+
 ### Version 1.3.3 - 31/03/2021
 - Added Greedy Game
-- Remove Twitter and Facebook links
-- Edit `social-container` and `social-bag-container`
+- Removed Twitter and Facebook links
+- Modified `social-container` and `social-bag-container`
 
 ### Version 1.3.2 - 12/03/2021
 - Added Worldwide Travel Alert app

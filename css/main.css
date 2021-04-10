@@ -18,8 +18,9 @@
   --logo-font-family: "Emblema One", cursive;
   --code-font-family: "IBM Plex Sans", sans-serif;
   --font-size-logo: 3rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.5rem;
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
   --font-size-h4: 0.9rem;
   --font-size-p: 0.85rem;
   --font-weight-normal: 300;
@@ -72,6 +73,10 @@ body {
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height);
   color: var(--primary-font-color);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
 }
 
 h2 {
@@ -631,8 +636,8 @@ header a {
 }
 
 .social-container li {
-  height: var(--font-size-h2);
-  width: var(--font-size-h2);
+  height: var(--font-size-h1);
+  width: var(--font-size-h1);
   
 }
 
@@ -1278,7 +1283,7 @@ header a {
 
 .skill-container li {
   background-color: transparent;
-  min-width: calc(var(--font-size-h2) * 5);
+  min-width: calc(var(--space-medium) * 5);
   height: 64px;
   perspective: 200px; /* 3d rotating-effect */
 }
