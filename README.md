@@ -13,12 +13,17 @@
 
 ## Changelog
 
+### Version 1.3.5 - 14/04/2021
+- Added Minhsenger™ app
+- Added robots.txt
+- Updated frontpage screenshot
+- Reorganized imgs
+
 ### Version 1.3.4 - 10/04/2021
 - Added Contacts+ app
 - Modified h1 and h2 tags
 - Fixed skill-icon class
 - Removed title in home page
-
 
 ### Version 1.3.3 - 31/03/2021
 - Added Greedy Game
