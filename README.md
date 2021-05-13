@@ -13,6 +13,9 @@
 
 ## Changelog
 
+### Version 1.3.6 - 13/05/2021
+- Fixed social icons in front page shrink due to the hidden availability line
+
 ### Version 1.3.5 - 14/04/2021
 - Added Minhsenger™ app
 - Added robots.txt

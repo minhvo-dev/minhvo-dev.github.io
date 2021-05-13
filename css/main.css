@@ -607,6 +607,7 @@ header a {
   justify-content: center;
   margin-top: calc(var(--font-size-logo) * var(--line-height));
   color: var(--accent-font-color);
+  min-width: calc(var(--space-medium) * 9); 
 }
 
 .home-intro > p {
