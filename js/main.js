@@ -139,7 +139,10 @@ Promise.all([fetchData, new Promise((resolve) => setTimeout(resolve, 2000))])
     hideLoadingScreen();
     showContentPage();
   })
-  .catch(err => console.log(err));
+  .catch(err => {
+    console.log(err);
+    window.location.href = "./error"
+  });
 
 // FETCHING DATA
 // -----------------------------------------------------------------------------------
@@ -568,8 +571,8 @@ submitBtn.addEventListener("click", (e) => {
 console.log(`${"%c"}        
    __ ___   ________              
   / // (_) /_  __/ /  ___ _______ 
- / _  / /   / / / _ \/ -_) __/ -_)
-/_//_/_/   /_/ /_//_/\__/_/  \__/ 
+ / _  / /   / / / _ \\/ -_) __/ -_)
+/_//_/_/   /_/ /_//_/\\__/_/  \\__/ 
                              
 😊
 `, "color:#20639B");

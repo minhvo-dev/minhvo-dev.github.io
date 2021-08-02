@@ -1,0 +1,162 @@
+/*
+ * Portfolio Error Page CSS
+ * @author: Vo, Dinh Tue Minh
+ * Reference: https://codepen.io/gavra/pen/upHzg
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300');
+ @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --primary-color: rgb(53, 54, 58);
+  --accent-color: #c94c4c;
+}
+
+ *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#wrap {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  margin-top: 8%;
+}
+
+/* Main  */
+main {
+  width: 90%;
+  margin: 40px auto;
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  animation: fade-in 1s forwards;
+  animation-delay: 11.5s;
+  visibility: hidden;
+}
+
+@keyframes fade-in {
+  99% { visibility: hidden;}
+  100% {visibility: visible;}
+}
+
+main h2 {
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: normal;
+  font-family: "Libre Baskerville", serif;
+  font-style: oblique;
+  text-align: center;
+}
+
+main p {
+  margin-bottom: 20px;
+}
+
+main code {
+  font-size: 24px;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.social-container a {
+  text-decoration: none;
+  color: white;
+  transition: 0.15s;
+  width: 36px;
+  height: 36px;
+}
+
+.social-container a:hover {
+  transform: scale(1.25);
+}
+
+/* Nav */
+
+nav > p {
+  margin: 0;
+  padding: 0;
+}
+
+nav > p > span {
+  float: left;
+  width: 12%;
+  display: block;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
+  padding: 0;
+  background-color: rgba(0,0,0,.2);
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3vw;
+  transition: all 0.5s ease, 
+              scale 0.5s ease, 
+              font-weight 0.2s ease;
+  transform: scale(0.85);
+}
+
+nav span.highlighted,
+nav p span:hover {
+  background-color: var(--accent-color);
+	color: white;
+	font-weight: 400;
+  transform: scale(1);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------------- */
+/* Screen query */
+@media only screen and (min-width: 800px) {
+  #wrap {
+    width: 80%;
+  }
+
+  main {
+    float: right;
+    margin: 0 auto;
+    max-width: 45%;
+  }
+
+  main h2 {
+    text-align: left;
+  }
+
+  nav {
+    float: left;
+    width: 45%;
+  }
+
+  nav > p > span {
+    font-size: 1.6vw;
+  }
+}
+/* ---------------------------------------------------------------- */

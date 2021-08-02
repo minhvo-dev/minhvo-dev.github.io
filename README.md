@@ -8,10 +8,14 @@
 <h3 align="center">Portfolio Site | Made by ✋ <h3>
 
 <a href="https://minhvo-dev.github.io" align="center">
-    <img alt="Screenshot" src="./res/frontpage_screenshot.png">
+    <img alt="Front page" src="./res/frontpage_screenshot.png">   
+    <img alt="Error page" src="./res/errorpage_screenshot.png">
 </a>
 
 ## Changelog
+
+### Version 1.4.0 - 02/08/2021
+- Added error page
 
 ### Version 1.3.6 - 13/05/2021
 - Fixed social icons in front page shrink due to the hidden availability line
