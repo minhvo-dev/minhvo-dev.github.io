@@ -14,6 +14,11 @@
 
 ## Changelog
 
+### Version 1.4.1 - 
+- Fixed error matrix
+- Updated styling on main page
+
+
 ### Version 1.4.0 - 02/08/2021
 - Added error page
 

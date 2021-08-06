@@ -30,10 +30,12 @@
   --accent-font-color: #ffffff;
   --line-height: 1.5;
   /* colors */
-  --primary-color: rgb(74, 85, 104);
+  /* --primary-color: rgb(74, 85, 104); */
+  --primary-color: #35363a;
   --primary-color-light: rgb(86, 99, 121);
   --primary-color-dark: rgba(74, 85, 104, 0.692);
   --secondary-color: #ffffff;
+  --secondary-color-dark: rgb(255, 255, 255, 0.85);
 
   --accent-color: #fd9290;
   --accent-color-light: #f79c9b;
@@ -183,7 +185,7 @@ noscript {
 
 #preloader {
   display: block;
-  background-color: #4a5568;
+  background-color: var(--primary-color);
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -697,7 +699,8 @@ header a {
 .special-btn a:focus {
   outline: none;
   background: var(--accent-color);
-  box-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color), 0 0 15px var(--accent-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 20px 30px -10px var(--accent-color);
 }
 
 .special-btn a:hover span,
@@ -707,7 +710,6 @@ header a {
 
 .special-btn span {
   position: absolute;
-  /* box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 40px var(--accent-color); */
   display: block;
   transition: all 0.5s ease-in-out;
 }
@@ -730,11 +732,6 @@ header a {
   }
 }
 
-/* .special-btn:hover span:nth-child(1) {
-  left: 100%;
-  transition: 0.75s;
-} */
-
 .special-btn span:nth-child(2) { /* right */
   top: -100%;
   right: 0;
@@ -752,12 +749,6 @@ header a {
     top: 100%;
   }
 }
-
-/* .special-btn:hover span:nth-child(2) {
-  top: 100%;
-  transition: 0.75s;
-  transition-delay: 0.25s;
-} */
 
 .special-btn span:nth-child(3) { /* bottom */
   bottom: 0;
@@ -777,12 +768,6 @@ header a {
   }
 }
 
-/* .special-btn:hover span:nth-child(3) {
-  right: 100%;
-  transition: 0.75s;
-  transition-delay: 0.5s;
-} */
-
 .special-btn span:nth-child(4) { /* left */
   bottom: -100%;
   left: 0;
@@ -800,12 +785,6 @@ header a {
     bottom: 100%;
   }
 }
-
-/* .special-btn:hover span:nth-child(4) {
-  bottom: 100%;
-  transition: 0.75s;
-  transition-delay: 0.75s;
-} */
 
 /* availability */
 #availability-link {
@@ -828,7 +807,8 @@ header a {
   align-items: center;
   background: var(--secondary-color);
   border-radius: var(--border-radius);
-  box-shadow: 0 0 10px var(--secondary-color), 0 0 40px var(--secondary-color);
+  /* box-shadow: 0px 20px 30px -10px var(--secondary-color); */
+  box-shadow: 0px 1px 3px var(--secondary-color-dark), 0px 1px 2px var(--secondary-color);
 }
 
 .person-card {
@@ -877,8 +857,8 @@ header a {
   align-items: center;
   bottom: calc(var(--space-small) * -1);
   border-radius: var(--border-radius);
-  background: var(--primary-color);
-  /* box-shadow: 0 2px 5px var(--primary-color), 0 2px 10px var(--primary-color); */
+  background: var(--secondary-color-dark);
+  box-shadow: 0 1px 3px var(--primary-color), 0 1px 2px var(--primary-color-dark);
 }
 
 .person-card-btn {
@@ -887,15 +867,16 @@ header a {
   height: calc(var(--font-size-h3) * var(--line-height));
   margin: calc(var(--space-normal) * 0.5);
   border-radius: 50%;
-  box-shadow: 0 0 5px var(--secondary-color);
+  box-shadow: 0 1px 3px var(--primary-color), 0 1px 2px var(--primary-color-dark);
   cursor: pointer;
   transition: color 0s, transform 0.15s;
+  color: var(--primary-color);
 }
 
 .person-card-btn.active {
   background: var(--accent-color);
   color: var(--accent-font-color);
-  box-shadow: 0 0 5px var(--accent-color);
+  /* box-shadow: 0 0 5px var(--accent-color); */
 }
 
 .person-card-btn:hover,

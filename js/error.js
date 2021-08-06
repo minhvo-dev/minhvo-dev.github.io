@@ -31,6 +31,10 @@ const styleNav = () => {
     setStyleValue(tile, "line-height", width);
   });
 
+  const p = document.querySelector("nav > p");
+  const pWidth = getStyleValue(p, "width");
+  setStyleValue(p, "height", pWidth);
+
   const nav = document.querySelector("nav");
   const navWidth = getStyleValue(nav, "width");
   setStyleValue(nav, "height", navWidth);
