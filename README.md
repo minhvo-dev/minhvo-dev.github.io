@@ -14,6 +14,10 @@
 
 ## Changelog
 
+### Version 1.5.1 - 08/08/2021
+- Fixed loading screen
+- Fixed contact form 
+
 ### Version 1.5.0 - 08/08/2021
 - Fixed error matrix
 - Updated styling on main page

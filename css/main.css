@@ -198,7 +198,7 @@ noscript {
 
 #preloader {
   display: block;
-  background-color: var(--primary-color);
+  background-color: rgb(53, 54, 58);
   width: 100vw;
   height: 100vh;
   position: relative;
