@@ -530,7 +530,7 @@ let firstTimeInput = true;
 const contactFormBtnError = document.getElementById("contact-form-btn-error");
 const scriptURL = "https://script.google.com/macros/s/AKfycbwiv84Z3C7X8Qm3T82WsoApJ9Q70XFssafyOxJZcj5KeeGEW_Nw/exec";
 submitBtn.addEventListener("click", (e) => {
-  e.preventDefault(); // stop the event, do not proceed further
+  e.preventDefault(); // no need for default action
   contactFormBtnError.classList.add("active");
   if (isContactFormNameValid() && isContactFormEmailValid() && isContactFormMessageValid()) {
     contactFormBtnError.innerHTML = "Pushing your input..."
@@ -565,6 +565,23 @@ submitBtn.addEventListener("click", (e) => {
 
 // CONTACT FORM
 // -----------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------
+// DARK MODE TOGGLE 
+
+const themeToggle = document.getElementById("theme-toggle-checkbox");
+themeToggle.addEventListener("change", (e) => {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+  else {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+});
+
+// DARK MODE TOGGLE 
+// -----------------------------------------------------------------------------------
+
 
 // -----------------------------------------------------------------------------------
 // HI THERE

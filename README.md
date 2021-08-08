@@ -14,9 +14,10 @@
 
 ## Changelog
 
-### Version 1.4.1 - 
+### Version 1.5.0 - 08/08/2021
 - Fixed error matrix
 - Updated styling on main page
+- Added dark mode
 
 
 ### Version 1.4.0 - 02/08/2021
