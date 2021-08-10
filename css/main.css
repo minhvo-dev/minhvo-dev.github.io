@@ -331,6 +331,12 @@ header {
   width: 100%;
   position: fixed;
   z-index: 100;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+}
+
+header.hide {
+  top: calc(var(--space-large) * -2);
 }
 
 .nav-container {
@@ -573,7 +579,7 @@ header a {
   text-align: center;
   position: sticky;
   padding: calc(var(--space-small) * 0.5);
-  top: calc(var(--space-large) * 1.5);
+  top: 0;
   background-color: var(--primary-color);
   color: var(--accent-font-color);
   z-index: 99;

@@ -14,6 +14,9 @@
 
 ## Changelog
 
+### Version 1.5.2 - 10/08/2021
+- Added auto-hide navbar
+
 ### Version 1.5.1 - 08/08/2021
 - Fixed loading screen
 - Fixed contact form 
@@ -22,7 +25,6 @@
 - Fixed error matrix
 - Updated styling on main page
 - Added dark mode
-
 
 ### Version 1.4.0 - 02/08/2021
 - Added error page

@@ -259,7 +259,40 @@ function hideIndicator() {
 };
 
 // toggle the scrolldown indicator based on scrolling
-window.onscroll = () => this.scrollY === 0 ? showIndicator() : hideIndicator();
+window.addEventListener("scroll", () => this.pageYOffset === 0 ? showIndicator() : hideIndicator());
+
+// show/hide nav bar on scrolling
+const header = document.querySelector("header");
+const nav = document.querySelector("nav");
+const scrollThreshold = 100;
+function toggleHeader() {
+  const currentY = window.pageYOffset;
+  window.removeEventListener("scroll", toggleHeader);
+  setTimeout(() => {
+    const nextY = window.pageYOffset;
+    if (nextY > window.innerHeight) {
+      window.addEventListener("scroll", toggleHeader);
+      const diff = nextY - currentY;
+      if (diff < scrollThreshold * -1) {
+        header.classList.remove("hide");
+      }
+      else if (diff > scrollThreshold) {
+        if (nav.classList.contains("active") === false) {
+          header.classList.add("hide");
+        }
+      }
+    }
+  }, 100);
+};
+
+window.addEventListener("scroll", () => {
+  if (this.pageYOffset > window.innerHeight) {
+    window.addEventListener("scroll", toggleHeader);
+  }
+  else {
+    header.classList.remove("hide");
+  }
+});
 
 // NAVIGATION
 // -----------------------------------------------------------------------------------
