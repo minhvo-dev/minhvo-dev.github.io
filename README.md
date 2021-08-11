@@ -3,9 +3,9 @@
     <img src="./assets/img/favicon.png" width="100px"/>
     <h3>https://minhvo-dev.github.io</h3>
 
-<h3>
+</h3>
 
-<h3 align="center">Portfolio Site | Made by ✋ <h3>
+<h3 align="center">Portfolio Site | Made by ✋ </h3>
 
 <a href="https://minhvo-dev.github.io" align="center">
     <img alt="Front page" src="./res/frontpage_screenshot.png">   
@@ -13,6 +13,9 @@
 </a>
 
 ## Changelog
+
+### Version 1.5.3 - 10/08/2021
+- Fixed navbar not hide in widescreen
 
 ### Version 1.5.2 - 10/08/2021
 - Added auto-hide navbar

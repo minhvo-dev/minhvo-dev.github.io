@@ -152,12 +152,14 @@ Promise.all([fetchData, new Promise((resolve) => setTimeout(resolve, 2000))])
 // NAVIGATION
 
 function toggleHamburger() {
-  // transform hamburger
-  const hamburger = document.getElementsByClassName("hamburger")[0];
-  hamburger.classList.toggle("action");
+  if (window.getComputedStyle(navToggleLabel).display !== "none") {
+    // transform hamburger
+    const hamburger = document.getElementsByClassName("hamburger")[0];
+    hamburger.classList.toggle("action");
 
-  // toggle nav menu
-  toggleNavigationMenu();
+    // toggle nav menu
+    toggleNavigationMenu();
+  }
 };
 
 // Toggle navigation
