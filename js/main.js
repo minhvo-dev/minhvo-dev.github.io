@@ -349,7 +349,9 @@ document.getElementById(jsBtnID).addEventListener("click", _ => {
     <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">name</span>     = <span class="code-value">"${myInfo.name}"</span>;</pre>
     <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"${myInfo.gender}"</span>;</pre>
     <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">location</span> = <span class="code-value">"${myInfo.location}"</span>;</pre>
-    <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">skills</span>   = [ <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span> ];</pre>
+    <pre>      <span class="code-keyword">this</span>.<span class="code-attribute">skills</span>   = [</pre>
+    <pre>        <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span></pre>
+    <pre>      ];</pre>
     <pre>   }</pre>
     <pre>}</pre>`;
   changeLanguage(jsBtnID, data)
@@ -379,7 +381,9 @@ document.getElementById(pythonBtnID).addEventListener("click", _ => {
   <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">name</span>     = <span class="code-value">"${myInfo.name}"</span></pre>
   <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">gender</span>   = <span class="code-value">"${myInfo.gender}"</span></pre>
   <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">location</span> = <span class="code-value">"${myInfo.location}"</span></pre>
-  <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">skills</span>   = [ <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span> ]</pre>`;
+  <pre>      <span class="code-keyword">self</span>.<span class="code-attribute">skills</span>   = [</pre>
+  <pre>          <span class="code-value">"</span><span class="code-value" id="${personCardSkillID}"></span><span class="code-value">"</span></pre>
+  <pre>      ]</pre>`;
   changeLanguage(pythonBtnID, data)
 });
 // csharp

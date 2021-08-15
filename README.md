@@ -14,6 +14,10 @@
 
 ## Changelog
 
+### Version 1.5.4 - 15/05/2021
+- Fixed skills overflowing on Firefox
+- Add console log in error page
+
 ### Version 1.5.3 - 10/08/2021
 - Fixed navbar not hide in widescreen
 
