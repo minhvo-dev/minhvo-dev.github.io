@@ -1555,6 +1555,7 @@ form h3 {
   min-width: 100%;
   max-width: 100%;
   min-height: calc(var(--font-size-p) * 9);
+  resize: vertical;
 }
 
 .contact-form-field input[type="text"]:hover,
