@@ -14,7 +14,12 @@
 
 ## Changelog
 
-### Version 1.5.4 - 15/05/2021
+### Version 1.6.0 - 05/09/2021
+- Changed project card style
+- Removed some old projects
+- Updated about section
+
+### Version 1.5.4 - 15/08/2021
 - Fixed skills overflowing on Firefox
 - Add console log in error page
 
