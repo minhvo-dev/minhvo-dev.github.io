@@ -1233,7 +1233,21 @@ header a {
   padding-bottom: var(--space-large);
 } 
 
-.skill-container {
+.about-headline {
+  width: 50%;
+  min-width: 300px;
+  margin: 0 auto;
+  margin-top: var(--space-normal);
+  padding: var(--space-normal) 0;
+  display: block;
+  text-align: center;
+  background-color: var(--primary-color-dark);
+  border-radius: var(--border-radius);
+  color: var(--accent-font-color);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.skill-card {
   position: relative;
   display: block;
   width: 100%;
@@ -1244,14 +1258,14 @@ header a {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-.skill-container h3 {
+.skill-card h3 {
   text-align: center;
   color: var(--accent-font-color);
   font-weight: var(--font-weight-bold);
   padding: var(--space-normal);
 }
 
-.skill-container ul {
+.skill-card ul {
   list-style: none;
   position: relative;
   width: 100%;
@@ -1265,7 +1279,7 @@ header a {
   align-items: center;
 }
 
-.skill-container li {
+.skill-card li {
   background-color: transparent;
   min-width: calc(var(--space-medium) * 5);
   height: 64px;
@@ -1283,7 +1297,7 @@ header a {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
 }
 
-.skill-container li:hover .skill-item {
+.skill-card li:hover .skill-item {
   transform: rotateY(150deg);
 }
 
@@ -1770,22 +1784,22 @@ footer p {
     margin-top: var(--space-large);
   }
 
-  .skill-container {
+  .skill-card {
     justify-self: center;
     align-self: stretch;
     
     margin: 0;
   }
 
-  .skill-container:first-child {
+  .skill-card:first-child {
     grid-area: language;
   }
 
-  .skill-container:nth-child(2) {
+  .skill-card:nth-child(2) {
     grid-area: framework;
   }
 
-  .skill-container:last-child {
+  .skill-card:last-child {
     grid-area: tool;
   }
   /* about */
