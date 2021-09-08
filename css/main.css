@@ -1452,7 +1452,7 @@ header a {
   color: var(--accent-font-color);
   display: block;
   border-radius: var(--border-radius);
-  box-shadow: 0 2px 4px var(--primary-color), 0 4px 8px var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 form h3 {
