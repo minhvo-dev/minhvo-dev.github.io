@@ -466,7 +466,7 @@ function buildContactFormAgreement() {
   }));
   let hrs = myTimeZone.getHours();
   let postfix = "AM";
-  if (hrs >= 12) {
+  if (hrs > 12) {
     hrs -= 12;
     postfix = "PM";
   }
