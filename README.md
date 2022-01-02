@@ -13,6 +13,8 @@
 </a>
 
 ## Changelog
+### Version 1.6.1 - 01/01/2022
+- Updated footer
 
 ### Version 1.6.0 - 05/09/2021
 - Changed project card style
