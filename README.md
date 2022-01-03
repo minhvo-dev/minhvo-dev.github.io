@@ -13,6 +13,9 @@
 </a>
 
 ## Changelog
+### Version 1.6.2 - 03/01/2022
+- Updated about section
+
 ### Version 1.6.1 - 01/01/2022
 - Updated footer
 
