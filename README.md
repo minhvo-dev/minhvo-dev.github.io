@@ -12,7 +12,16 @@
     <img alt="Error page" src="./res/errorpage_screenshot.png">
 </a>
 
+## Todo
+- [ ] Set up AWS Lambda for initial fetch
+
 ## Changelog
+### Version 1.7.0 - 03/09/2022
+- Ditch heroku:
+   - Demo links
+   - Initial fetch
+- Add some new skills, remove some
+
 ### Version 1.6.2 - 03/01/2022
 - Updated about section
 

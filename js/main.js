@@ -104,37 +104,13 @@ const myInfo = {
   name: "Minh",
   gender: "♂",
   location: "🇨🇦🍁",
-  skills: []
+  skills: ['C++', 'JavaScript', 'HTML5', 'CSS3', 'React', 'C#', '.NET', 'SQL', 'Entity Framework', 'SpecFlow', 'OData'],
+  availability: false,
 };
-const fetchData = fetch("https://aqueous-scrubland-74133.herokuapp.com/", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    query: `
-      query {
-        getMyInfo {
-        name
-        gender
-        location
-        skills
-        availability
-      } 
-    }`,
-    variables: {}
-  })
-});
 // let's wait at least 2 sec
-Promise.all([fetchData, new Promise((resolve) => setTimeout(resolve, 2000))])
-  .then(values => values[0].json())
-  .then(res => {
-    const { name, gender, location, skills, availability } = res.data.getMyInfo;
-    myInfo.name = name;
-    myInfo.gender = gender;
-    myInfo.location = location;
-    myInfo.skills = skills;
-    setAvailabilityLink(availability);
+Promise.all([new Promise((resolve) => setTimeout(resolve, 2000))])
+  .then(() => {
+    setAvailabilityLink(myInfo.availability);
     setNewSkillToHTML();
     hideLoadingScreen();
     showContentPage();
@@ -261,17 +237,17 @@ function hideIndicator() {
 };
 
 // toggle the scrolldown indicator based on scrolling
-window.addEventListener("scroll", () => this.pageYOffset === 0 ? showIndicator() : hideIndicator());
+window.addEventListener("scroll", () => this.scrollY === 0 ? showIndicator() : hideIndicator());
 
 // show/hide nav bar on scrolling
 const header = document.querySelector("header");
 const nav = document.querySelector("nav");
 const scrollThreshold = 100;
 function toggleHeader() {
-  const currentY = window.pageYOffset;
+  const currentY = window.scrollY;
   window.removeEventListener("scroll", toggleHeader);
   setTimeout(() => {
-    const nextY = window.pageYOffset;
+    const nextY = window.scrollY;
     if (nextY > window.innerHeight) {
       window.addEventListener("scroll", toggleHeader);
       const diff = nextY - currentY;
@@ -288,7 +264,7 @@ function toggleHeader() {
 };
 
 window.addEventListener("scroll", () => {
-  if (this.pageYOffset > window.innerHeight) {
+  if (this.scrollY > window.innerHeight) {
     window.addEventListener("scroll", toggleHeader);
   }
   else {
