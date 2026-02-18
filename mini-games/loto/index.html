@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Loto</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script>
+            let minNumber = 1;
+            let maxNumber = 90;
+            let current = 0;
+            let intervalId = null;
+            let state = [];
+            let delay = 5_000;
+            let round = 0;
+
+            let historyOl = document.getElementById("history");
+            let historyContainer = document.getElementById("history-container");
+            let announcer = document.getElementById("announcer");
+
+            let startButton = document.getElementById("start-button");
+            let pauseButton = document.getElementById("pause-button");
+            let resumeButton = document.getElementById("resume-button");
+            let restartButton = document.getElementById("restart-button");
+            let searchButton = document.getElementById("search-button");
+
+            let searchInput = document.getElementById("search-input");
+            let modal = document.getElementById("settings-modal");
+
+            let delayInput = document.getElementById("settings-delay-input");
+
+            function init() {
+                historyOl = document.getElementById("history");
+                historyContainer = document.getElementById("history-container");
+                announcer = document.getElementById("announcer");
+
+                startButton = document.getElementById("start-button");
+                pauseButton = document.getElementById("pause-button");
+                resumeButton = document.getElementById("resume-button");
+                restartButton = document.getElementById("restart-button");
+                searchButton = document.getElementById("search-button");
+
+                searchInput = document.getElementById("search-input");
+                modal = document.getElementById("settings-modal");
+
+                delayInput = document.getElementById("settings-delay-input");
+                restart();
+            }
+
+            function hideElement(element) {
+                element.classList.add("hidden");
+            }
+
+            function showElement(element) {
+                element.classList.remove("hidden");
+            }
+
+            function start() {
+                hideElement(startButton);
+                showElement(pauseButton);
+
+                state = Array.from({ length: maxNumber - minNumber + 1 });
+                intervalId = setInterval(roll, delay);
+            }
+
+            function pause() {
+                hideElement(pauseButton);
+                showElement(resumeButton);
+                showElement(restartButton);
+                clearInterval(intervalId);
+                announcer.innerHTML = "...";
+            }
+
+            function resume() {
+                hideElement(resumeButton);
+                hideElement(restartButton);
+                showElement(pauseButton);
+                announcer.innerHTML = "";
+                intervalId = setInterval(roll, delay);
+            }
+
+            function restart() {
+                current = 0;
+                state = [];
+                announcer.innerText = "";
+                historyOl.innerHTML = "";
+                searchInput.value = "";
+                showElement(startButton);
+                hideElement(restartButton);
+                hideElement(pauseButton);
+                hideElement(resumeButton);
+                clearTimeout(intervalId);
+            }
+
+            function roll() {
+                const total = maxNumber - minNumber + 1;
+                const unplayedCount = total - round;
+                let selected = Math.floor(Math.random() * unplayedCount);
+                for (let i = 0; i < state.length; ++i) {
+                    if (!Boolean(state[i])) {
+                        if (selected == 0) {
+                            announce(i + minNumber);
+                            state[i] = ++round;
+                            break;
+                        }
+                        --selected;
+                    }
+                }
+                if (round == total) {
+                    hideElement(pauseButton);
+                    showElement(restartButton);
+                    announcer.innerText = "Done";
+                    clearInterval(intervalId);
+                }
+            }
+
+            function announce(number) {
+                const audioUrl = `assets/audio/${number}.mp3`;
+                const audio = new Audio(audioUrl);
+                audio.play();
+                announcer.innerText = number;
+                historyOl.innerHTML =
+                    historyOl.innerHTML +
+                    `<li data="${number}" class="rounded-full flex items-center justify-center py-2 px-2 w-20 h-20 bg-indigo-500 text-white font-semibold text-xl">${number}</li>`;
+                historyContainer.scrollTop = historyContainer.scrollHeight;
+            }
+
+            function search() {
+                const searchValue = searchInput.value;
+
+                for (let child of historyOl.children) {
+                    const data = child.getAttribute("data");
+
+                    if (data == searchValue) {
+                        child.classList.remove("bg-indigo-500");
+                        child.classList.add("bg-green-500");
+                        child.scrollIntoView({ behavior: "smooth" });
+                        break;
+                    }
+                }
+            }
+
+            function showModal() {
+                delayInput.value = delay;
+                modal.showModal();
+            }
+
+            function updateSettings() {
+                delay = parseInt(delayInput.value);
+                modal.close();
+            }
+        </script>
+        <style>
+            html {
+                font-family: "Inter", sans-serif;
+            }
+
+            :modal {
+                border-radius: 0.5rem;
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-self: center;
+                justify-self: center;
+                gap: 0.5rem;
+            }
+        </style>
+    </head>
+
+    <body
+        class="p-4 antialiased bg-slate-200 flex flex-col gap-4 w-screen h-screen"
+        onload="init()"
+    >
+        <div class="flex flex-row justify-center align-center gap-4 shrink-0">
+            <button
+                class="w-40 rounded-xl border-none bg-lime-500 px-8 py-4 text-2xl font-semibold text-white"
+                onclick="start()"
+                id="start-button"
+            >
+                Start
+            </button>
+            <button
+                class="w-40 hidden rounded-xl border-none bg-amber-500 px-8 py-4 text-2xl font-semibold text-white"
+                onclick="pause()"
+                id="pause-button"
+            >
+                Pause
+            </button>
+            <button
+                class="w-40 hidden rounded-xl border-none bg-sky-500 px-8 py-4 text-2xl font-semibold text-white"
+                onclick="resume()"
+                id="resume-button"
+            >
+                Resume
+            </button>
+            <button
+                class="w-40 hidden rounded-xl border-none bg-slate-500 px-8 py-4 text-2xl font-semibold text-white"
+                class="hidden"
+                onclick="restart()"
+                id="restart-button"
+            >
+                Restart
+            </button>
+        </div>
+        <div
+            class="h-80 rounded-2xl grid place-content-center text-8xl bg-slate-100/100 text-stone-500 font-extrabold shrink-0"
+            id="announcer"
+        ></div>
+
+        <div
+            class="grow p-4 rounded-2xl bg-slate-100/100 overflow-scroll shrink"
+            id="history-container"
+        >
+            <ol
+                class="flex items-start justify-center flex-wrap gap-4 overflow-hidden"
+                id="history"
+            >
+                <li
+                    class="hidden bg-green-500 rounded-full flex items-center justify-center py-2 px-2 w-20 bg-indigo-500 text-white font-semibold text-xl"
+                >
+                    0
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex flex-row gap-4">
+            <input
+                class="bg-white py-2 px-4 grow rounded-xl"
+                type="number"
+                id="search-input"
+            />
+            <button
+                id="search-button"
+                class="w-20 bg-blue-500 rounded-xl text-2xl text-white flex flex-row items-center justify-center"
+                onclick="search()"
+            >
+                &#8981;
+            </button>
+        </div>
+
+        <button
+            class="absolute top-2 right-2 p-2 text-slate-600 w-8 h-8"
+            id="open-modal-button"
+            onclick="showModal()"
+        >
+            &#9881;
+        </button>
+        <dialog id="settings-modal">
+            <div>Delay (ms):</div>
+            <input type="number" id="settings-delay-input" />
+            <button autofocus onclick="updateSettings()">Close</button>
+        </dialog>
+    </body>
+</html>
