@@ -89,9 +89,11 @@
             function restart() {
                 current = 0;
                 state = [];
+                round = 0;
                 announcer.innerText = "";
                 historyOl.innerHTML = "";
                 searchInput.value = "";
+                
                 showElement(startButton);
                 hideElement(restartButton);
                 hideElement(pauseButton);
