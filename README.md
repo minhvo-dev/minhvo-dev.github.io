@@ -16,6 +16,9 @@
 - [ ] Set up AWS Lambda for initial fetch
 
 ## Changelog
+### Version 1.8.1 - 19/02/2026
+- Fix premature end after restarting
+
 ### Version 1.8.0 - 18/02/2026
 - Add mini game Loto
 
