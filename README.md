@@ -16,17 +16,20 @@
 - [ ] Set up AWS Lambda for initial fetch
 
 ## Changelog
+### Version 1.8.2 - 20/02/2026
+- Added found sound
+
 ### Version 1.8.1 - 19/02/2026
-- Fix premature end after restarting
+- Fixed premature end after restarting
 
 ### Version 1.8.0 - 18/02/2026
-- Add mini game Loto
+- Added mini game Loto
 
 ### Version 1.7.0 - 03/09/2022
-- Ditch heroku:
+- Ditched heroku:
    - Demo links
    - Initial fetch
-- Add some new skills, remove some
+- Added some new skills, removed some
 
 ### Version 1.6.2 - 03/01/2022
 - Updated about section
